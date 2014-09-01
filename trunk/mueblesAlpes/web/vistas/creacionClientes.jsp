@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,7 +49,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="index.jsp">Inicio</a></li>
+                        <li class="active"><a href="/index.jsp">Inicio</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administraci&oacute;n <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
@@ -92,8 +92,8 @@
         </nav>
         <!-- Page Content -->
         <div class="container">
-
             <div class="row">
+                <br>
                 <fieldset> 
                     <legend> Mis datos</legend>
 
@@ -332,12 +332,9 @@
                                 </div>
                             </div>
                         </div>
-
-
-
                         <div class="form-group">
                             <div class="col-lg-offset-2 col-lg-10">
-                                <button type="submit" class="btn btn-default">Entrar</button>
+                                <button type="submit" class="btn btn-default">Aceptar</button>
                             </div>
                         </div>
                     </form>

@@ -28,9 +28,8 @@
         <![endif]-->
 
     </head>
-
+    
     <body>
-
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
@@ -53,7 +52,7 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="vistas/creacionClientes.jsp">Creacion De Clientes</a></li>
                                 <li><a href="#">Eliminar Cliente</a></li>
-                                <li><a href="#">Consulta de Clientes</a></li>
+                                <li><a href="vistas/consultarClientes.jsp">Consulta de Clientes</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
