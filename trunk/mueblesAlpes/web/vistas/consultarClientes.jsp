@@ -96,23 +96,22 @@
                 <br>
                 <fieldset>       
                     <legend>Consulta</legend>
-
+                    <label> Digite su documento de identificacion</label>
                     <form class="form-horizontal" role="form">
-
+                        <div class="col-xs-5">
                         <div class="form-group">
-                            <label for="documento_id" class="col-lg-2 control-label">Digite su documento de identificacion</label>
+                            <label for="documento_id" class="col-lg-2 control-label">N° ID</label>
                             <div class="col-lg-10">
                                 <input type="text" class="form-control" id="documento_id"
                                        placeholder="Documento">
                             </div>
-                        </div>                   
+                        </div>   
+                        </div>
                         <div class="form-group">
-                            <div class="col-lg-offset-2 col-lg-10">
+                            <div class="col-lg-offset-2">
                                 <button type="submit" class="btn btn-default">Consultar</button>
                             </div>
-                        </div>
-
-                        
+                        </div>                       
                     </form>
                 </fieldset>
 
