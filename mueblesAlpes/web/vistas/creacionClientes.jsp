@@ -98,23 +98,26 @@
                     <legend> Mis datos</legend>
 
                     <form class="form-horizontal" role="form">
-
-                        <div class="form-group">
-                            <label for="nombre_s" class="col-lg-2 control-label">Nombre(s)</label>
-                            <div class="col-lg-10">
-                                <input type="text" class="form-control" id="nombre_s"
-                                       placeholder="Nombre(s)">
+                        <div class="col-xs-5">
+                            <div class="form-group">
+                                <label for="nombre_s" class="col-lg-2 control-label">Nombre(s) </label>
+                                <div class="col-lg-9">
+                                    <input type="text" class="form-control" id="nombre_s"
+                                           placeholder="Nombre(s)">
+                                </div>
                             </div>
                         </div>
+                        <div class="col-xs-4">
 
-                        <div class="form-group">
-                            <label for="primer_apellido" class="col-lg-2 control-label">Primer apellido</label>
-                            <div class="col-lg-10">
-                                <input type="text" class="form-control" id="primer_apellido"
-                                       placeholder="Primer apellido">
+                            <div class="form-group">
+                                <label for="primer_apellido" class="col-lg-2 control-label">Primer apellido</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" id="primer_apellido"
+                                           placeholder="Primer apellido">
+                                </div>
                             </div>
                         </div>
-
+                        <div class="col-xs-4">
                         <div class="form-group">
                             <label for="segundo_apellido" class="col-lg-2 control-label">Segundo apellido</label>
                             <div class="col-lg-10">
@@ -122,9 +125,10 @@
                                        placeholder="Segundo apellido">
                             </div>
                         </div>
-
+                        </div>
+                        <div class="col-xs-3">
                         <div class="form-group">
-                            <label for="tipo_de_documento" class="col-lg-2 control-label">Tipo de documento</label>
+                            <label for="tipo_de_documento" class="col-lg-2 control-label">Tipo documento</label>
                             <div class="col-lg-10">
                                 <select class="form-control">
                                     <option>cedula de ciudadania</option>
@@ -132,13 +136,15 @@
                                     <option>pasaporte</option>                
                                 </select>
                             </div>
+                            </div>
                         </div>
-
+                        <div class="col-xs-4">
                         <div class="form-group">
-                            <label for="numero_de_documento" class="col-lg-2 control-label">Numero de documento</label>
+                            <label for="numero_de_documento" class="col-lg-2 control-label">N° documento</label>
                             <div class="col-lg-10">
                                 <input type="text" class="form-control" id="numero_de_documento"
                                        placeholder="Numero de documento">
+                            </div>
                             </div>
                         </div>
 
