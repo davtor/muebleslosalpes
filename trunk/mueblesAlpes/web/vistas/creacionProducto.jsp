@@ -49,32 +49,32 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="http://localhost:8080/mueblesAlpes/index.jsp">Inicio</a></li>
+            <li class="active"><a href="http://localhost:8089/mueblesAlpes/index.jsp">Inicio</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administraci&oacute;n <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="http://localhost:8080/mueblesAlpes/vistas/creacionClientes.jsp">Creacion De Clientes</a></li>
-                <li><a href="http://localhost:8080/mueblesAlpes/vistas/eliminacionClientes.jsp">Eliminar Cliente</a></li>
-                <li><a href="http://localhost:8080/mueblesAlpes/vistas/consultarClientes.jsp">Consulta de Clientes</a></li>
+                <li><a href="http://localhost:8089/mueblesAlpes/vistas/creacionClientes.jsp">Creacion De Clientes</a></li>
+                <li><a href="http://localhost:8089/mueblesAlpes/vistas/eliminacionClientes.jsp">Eliminar Cliente</a></li>
+                <li><a href="http://localhost:8089/mueblesAlpes/vistas/consultarClientes.jsp">Consulta de Clientes</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Productos <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="http://localhost:8080/mueblesAlpes/vistas/creacionProducto.jsp">Creacion De Productos</a></li>
-                <li><a href="http://localhost:8080/mueblesAlpes/vistas/edicionProductos.jsp">Edicion De Productos</a></li>
-                <li><a href="http://localhost:8080/mueblesAlpes/vistas/eliminacionProductos.jsp">Eliminacion De Productos</a></li>
-                <li><a href="http://localhost:8080/mueblesAlpes/vistas/consultaProductos.jsp">Consulta De Productos</a></li>
-                <li><a href="http://localhost:8080/mueblesAlpes/vistas/registroPreciosProductos.jsp">Registro De Precios</a></li>
+                <li><a href="http://localhost:8089/mueblesAlpes/vistas/creacionProducto.jsp">Creacion De Productos</a></li>
+                <li><a href="http://localhost:8089/mueblesAlpes/vistas/edicionProductos.jsp">Edicion De Productos</a></li>
+                <li><a href="http://localhost:8089/mueblesAlpes/vistas/eliminacionProductos.jsp">Eliminacion De Productos</a></li>
+                <li><a href="http://localhost:8089/mueblesAlpes/vistas/consultaProductos.jsp">Consulta De Productos</a></li>
+                <li><a href="http://localhost:8089/mueblesAlpes/vistas/registroPreciosProductos.jsp">Registro De Precios</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reportes <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="http://localhost:8080/mueblesAlpes/vistas/ventasDiarias.jsp">Ventas Diarias</a></li>
-                <li><a href="http://localhost:8080/mueblesAlpes/vistas/productomasVendido.jsp">Producto Mas Vendido</a></li>
-                <li><a href="http://localhost:8080/mueblesAlpes/vistas/comprasporCliente.jsp">Compras Por Cliente</a></li>
-                <li><a href="http://localhost:8080/mueblesAlpes/vistas/listadoProductos.jsp">Listado De Productos</a></li>
+                <li><a href="http://localhost:8089/mueblesAlpes/vistas/ventasDiarias.jsp">Ventas Diarias</a></li>
+                <li><a href="http://localhost:8089/mueblesAlpes/vistas/productomasVendido.jsp">Producto Mas Vendido</a></li>
+                <li><a href="http://localhost:8089/mueblesAlpes/vistas/comprasporCliente.jsp">Compras Por Cliente</a></li>
+                <li><a href="http://localhost:8089/mueblesAlpes/vistas/listadoProductos.jsp">Listado De Productos</a></li>
               </ul>
             </li>
             <li><a href="#">Ingresar</a></li>
