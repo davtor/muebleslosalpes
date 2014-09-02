@@ -1,20 +1,15 @@
-<%-- 
-    Document   : creacionProducto
-    Created on : 1/09/2014, 02:44:53 PM
-    Author     : davtor
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
   <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Creacion de Clientes</title>
+    <title>Muebles Los Alpes</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +28,9 @@
     <![endif]-->
 
   </head>
+
   <body>
+    <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -90,73 +87,72 @@
       </div>
       <!-- /.container -->
     </nav>
-
     <!-- Page Content -->
     <div class="container">
+
+      <!-- Marketing Icons Section -->
       <div class="row">
-        <br>
-        <fieldset> 
-          <legend> Mis Productos</legend>
-
-          <form class="form-horizontal" role="form">
-            <div class="col-xs-5">
-              <div class="form-group">
-                <label for="codigo_mueble" class="col-lg-2 control-label">Codigo del mueble</label>
-                <div class="col-lg-9">
-                  <input type="text" class="form-control" id="codigo_mueble"
-                         placeholder="codigo_producto">
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xs-3">
-              <div class="form-group">
-                <label for="tipo_de_mueble" class="col-lg-2 control-label">Tipo de mueble</label>
-                <div class="col-lg-10">
-                  <select class="form-control">
-                    <option>comedor</option>
-                    <option>sala extranjera</option>
-                    <option>bife</option>                
-                  </select>
-                </div>
-              </div>
-            </div>             
-
-
-            <div class="col-xs-5">
-              <div class="form-group">
-                <label for="nombre_s" class="col-lg-2 control-label">Nombre</label>
-                <div class="col-lg-9">
-                  <input type="text" class="form-control" id="nombre_s"
-                         placeholder="Nombre(s)">
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xs-4">
-              <div class="form-group">
-                <label for="precio_de_entrada" class="col-lg-2 control-label">Precio de entrada</label>
-                <div class="col-lg-10">
-                  <input type="text" class="form-control" id="precio_de_entrada"
-                         placeholder="$000000">
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xs-4">
-              <div class="form-group">
-                <label for="precio_de_venta" class="col-lg-2 control-label">precio de Venta</label>
-                <div class="col-lg-10">
-                  <input type="text" class="form-control" id="precio_de_venta"
-                         placeholder="$000000">
-                </div>
-              </div>
-            </div>
-
-          </form>
-        </fieldset>
+        <form class="form-horizontal" role="form">
+          <br>
+          <fieldset>
+            <legend>Eliminacion de Clientes</legend>
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th style="width: 10%; text-align: center">Cedula</th>
+                  <th style="width: 40%; text-align: center">Nombre</th>
+                  <th style="width: 40%; text-align: center">Apellido</th>
+                  <th style="width: 40%; text-align: center">#</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 10%; text-align: center">
+                    123456789
+                  </td>
+                  <td style="width: 10%; text-align: center">
+                    Sebastian
+                  </td>
+                  <td style="width: 10%; text-align: center">
+                    Rojas
+                  </td>
+                  <td style="width: 10%; text-align: center">
+                    <input type="checkbox">
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 10%; text-align: center">
+                    987654321
+                  </td>
+                  <td style="width: 10%; text-align: center">
+                    Ricardo
+                  </td>
+                  <td style="width: 10%; text-align: center">
+                    Narvaez
+                  </td>
+                  <td style="width: 10%; text-align: center">
+                    <input type="checkbox">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <input type="submit" value="Enviar" class="btn btn-default">
+          </fieldset>
+        </form>
       </div>
+      <!-- /.row -->
+
+      <!-- Footer -->
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+            <p>Copyright &copy; Your Website 2014</p>
+          </div>
+        </div>
+      </footer>
+
     </div>
+    <!-- /.container -->
 
     <!-- jQuery Version 1.11.0 -->
     <script src="../js/jquery-1.11.0.js"></script>
