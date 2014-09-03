@@ -99,20 +99,29 @@
           <legend> Mis Productos</legend>
 
           <form class="form-horizontal" role="form">
-            <div class="col-xs-5">
+            <div class="col-md-3">
               <div class="form-group">
-                <label for="codigo_mueble" class="col-lg-2 control-label">Codigo del mueble</label>
-                <div class="col-lg-9">
+                <label for="codigo_mueble" class="col-lg-10 control-label">Codigo del mueble</label>
+                <div class="col-lg-12">
                   <input type="text" class="form-control" id="codigo_mueble"
                          placeholder="codigo_producto">
                 </div>
               </div>
             </div>
-
-            <div class="col-xs-3">
+              <div class="col-md-2">
               <div class="form-group">
-                <label for="tipo_de_mueble" class="col-lg-2 control-label">Tipo de mueble</label>
-                <div class="col-lg-10">
+                <label for="nombre" class="col-lg-9 control-label">Nombre</label>
+                <div class="col-lg-12">
+                  <input type="text" class="form-control" id="nombre"
+                         placeholder="sofa cama">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-2">
+              <div class="form-group">
+                <label for="tipo_mueble" class="col-lg-10 control-label">Tipo de mueble</label>
+                <div class="col-lg-12">
                   <select class="form-control">
                     <option>comedor</option>
                     <option>sala extranjera</option>
@@ -122,31 +131,30 @@
               </div>
             </div>             
 
-
-            <div class="col-xs-5">
+            <div class="col-md-1">
               <div class="form-group">
-                <label for="nombre_s" class="col-lg-2 control-label">Nombre</label>
-                <div class="col-lg-9">
-                  <input type="text" class="form-control" id="nombre_s"
-                         placeholder="Nombre(s)">
+                <label for="cantidad" class="col-lg-10 control-label">Cantidad</label>
+                <div class="col-lg-12">
+                  <input type="text" class="form-control" id="cantidad"
+                         placeholder="001">
                 </div>
               </div>
             </div>
 
-            <div class="col-xs-4">
+            <div class="col-md-2">
               <div class="form-group">
-                <label for="precio_de_entrada" class="col-lg-2 control-label">Precio de entrada</label>
-                <div class="col-lg-10">
+                <label for="precio_de_entrada" class="col-lg-10 control-label">Precio de entrada</label>
+                <div class="col-lg-12">
                   <input type="text" class="form-control" id="precio_de_entrada"
                          placeholder="$000000">
                 </div>
               </div>
             </div>
 
-            <div class="col-xs-4">
+            <div class="col-lg-2">
               <div class="form-group">
-                <label for="precio_de_venta" class="col-lg-2 control-label">precio de Venta</label>
-                <div class="col-lg-10">
+                <label for="precio_de_venta" class="col-lg-10 control-label">precio de Venta</label>
+                <div class="col-lg-12">
                   <input type="text" class="form-control" id="precio_de_venta"
                          placeholder="$000000">
                 </div>

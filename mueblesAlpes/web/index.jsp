@@ -100,19 +100,19 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
         <div class="item active">
-          <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
+          <div class="fill" style="background-image:url('http://www.lombanacosta.com/images/muebles.jpg');"></div>
           <div class="carousel-caption">
             <h2>Caption 1</h2>
           </div>
         </div>
         <div class="item">
-          <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+          <div class="fill" style="background-image:url('http://3.bp.blogspot.com/-acsOrTkTKUU/UUCz_1QtwKI/AAAAAAAAN4A/iLwUqGnGL5U/s1600/Lindos+Muebles+para+una+Sala+de+Estar+Pequen%CC%83a+-+Small+Living+Room+10.jpg');"></div>
           <div class="carousel-caption">
             <h2>Caption 2</h2>
           </div>
         </div>
         <div class="item">
-          <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+          <div class="fill" style="background-image:url('http://www.mueblesjamar.com.pa/Salas/muebles-sala-contemporanea-matrix-2.jpg');"></div>
           <div class="carousel-caption">
             <h2>Caption 3</h2>
           </div>
