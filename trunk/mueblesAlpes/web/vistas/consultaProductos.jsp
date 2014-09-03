@@ -102,15 +102,19 @@
           <fieldset>
             <legend>Consulta de Productos</legend>
             <div class="form-group">
-              <label for="idCodigoProducto" class="col-lg-2 control-label">Codigo Producto</label>
-              <div class="col-lg-9">
-                <input type="email" class="form-control" id="idCodigoProducto"
+                <div class="col-xs-6">
+              <label for="idCodigo_Producto" class="col-lg-5 control-label">Codigo Producto</label>
+              <div class="col-lg-7">
+                  <input type="text" class="form-control" id="idCodigo_Producto"
                        placeholder="Codigo Producto">
               </div>
+                </div>
+              <div class="col-xs-6">
               <div class="col-lg-9">
                 <button type="button" class="btn btn-default">
                   <span class="glyphicon glyphicon-search"> Buscar</span>
                 </button>
+              </div>
               </div>
             </div>
           </fieldset>

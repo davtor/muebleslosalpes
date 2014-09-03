@@ -110,14 +110,14 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="segundo_nombre" class="col-lg-3 control-label">Segundo nombre</label>
-                                    <div class="col-lg-9">
+                                    <label for="segundo_nombre" class="col-lg-4 control-label">Segundo nombre</label>
+                                    <div class="col-lg-8">
                                         <input type="text" class="form-control" id="Segundo_nombreo"
                                                placeholder="Segundo_nombre">
                                     </div>
                                 </div>
                             </div>                     
-                            <div class="col-xs-6">
+                            <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="primer_apellido" class="col-lg-3 control-label">Primer apellido</label>
                                     <div class="col-lg-9">
@@ -126,16 +126,16 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xs-6">
+                            <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="segundo_apellido" class="col-lg-3 control-label">Segundo apellido</label>
-                                    <div class="col-lg-9">
+                                    <label for="segundo_apellido" class="col-lg-4 control-label">Segundo apellido</label>
+                                    <div class="col-lg-8">
                                         <input type="text" class="form-control" id="segundo_apellido"
                                                placeholder="Segundo apellido">
                                     </div>
                                 </div>      
                             </div>
-                            <div class="col-xs-4">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="tipo_de_documento" class="col-lg-5 control-label">Tipo documento</label>
                                     <div class="col-lg-7">
@@ -147,7 +147,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xs-4">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="numero_de_documento" class="col-lg-4 control-label">N° documento</label>
                                     <div class="col-lg-8">
@@ -156,7 +156,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xs-4">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="numero_de_celular" class="col-lg-5 control-label">Numero de celular</label>
                                     <div class="col-lg-7">
@@ -165,7 +165,7 @@
                                     </div>
                                 </div>
                             </div>  
-                            <div class="col-xs-3">
+                            <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="ejemplo_email_3" class="col-lg-2 control-label">Email</label>
                                     <div class="col-lg-10">
@@ -174,11 +174,11 @@
                                     </div> 
                                 </div>
                             </div>
-                            <div class="col-xs-5">
+                            <div class="col-md-6">
                                 <div class="form-group">   
                                     <label for="FechaNacimiento" class="col-lg-4 control-label">Fecha de Nacimiento</label>
-                                    <div class="col-lg-8">
-                                        <select data-val="true" data-val-number="The field DiaNacimiento must be a number." id="dia_nacimiento" name="dia_nacimiento"><option value="">Día</option>
+                                    <div class="col-lg-2">
+                                        <select  select class="form-control" data-val="true" data-val-number="The field DiaNacimiento must be a number." id="dia_nacimiento" name="dia_nacimiento"><option value="">Día</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -211,8 +211,9 @@
                                             <option value="30">30</option>
                                             <option value="31">31</option>
                                         </select>
-
-                                        <select data-val="true" data-val-number="The field MesNacimiento must be a number." id="MesNacimiento" name="MesNacimiento"><option value="">Mes</option>
+                                    </div>
+                                        <div class="col-lg-3">
+                                        <select class="form-control"  data-val="true" data-val-number="The field MesNacimiento must be a number." id="MesNacimiento" name="MesNacimiento"><option value="">Mes</option>
                                             <option value="1">enero</option>
                                             <option value="2">febrero</option>
                                             <option value="3">marzo</option>
@@ -226,8 +227,9 @@
                                             <option value="11">noviembre</option>
                                             <option value="12">diciembre</option>
                                         </select>
-
-                                        <select data-val="true" data-val-number="The field AnioNacimiento must be a number." id="AnioNacimiento" name="AnioNacimiento"><option value="">Año</option>
+ </div>
+                                        <div class="col-lg-3">
+                                        <select select class="form-control" data-val="true" data-val-number="The field AnioNacimiento must be a number." id="AnioNacimiento" name="AnioNacimiento"><option value="">Año</option>
                                             <option value="1996">1996</option>
                                             <option value="1995">1995</option>
                                             <option value="1994">1994</option>
@@ -330,23 +332,24 @@
                                             <option value="1897">1897</option>
                                         </select>
                                     </div>
-                                </div>  
-                            </div>
-                            <div class="col-xs-4">
-                                <div class="form-group">
-                                    <label for="ejemplo_password_3" class="col-lg-3 control-label">Contraseña</label>
-                                    <div class="col-lg-9">
-                                        <input type="password" class="form-control" id="ejemplo_password_3" 
-                                               placeholder="Contraseña">
-                                    </div>
+                                </div>            
+                            </div> 
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="ejemplo_password_3" class="col-lg-4 control-label">Contraseña</label>
+                                <div class="col-lg-8">
+                                    <input type="password" class="form-control" id="ejemplo_password_3" 
+                                           placeholder="Contraseña">
                                 </div>
                             </div>
-                        </div>  
+                        </div>
+                         
                         <div class="form-group">
                             <div class="col-lg-offset-2 col-lg-10">
                                 <button type="submit" class="btn btn-default">Aceptar</button>
                             </div>
                         </div>
+                         </div> 
                     </form>
                 </fieldset>
             </div>

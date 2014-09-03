@@ -106,7 +106,8 @@
                 <tr>
                   <th style="width: 10%; text-align: center">Codigo</th>
                   <th style="width: 30%; text-align: center">Nombre</th>
-                  <th style="width: 20%; text-align: center">Tipo de Mueble</th>
+                  <th style="width: 10%; text-align: center">Tipo de Mueble</th>
+                  <th style="width: 10%; text-align: center">cantidad</th>
                   <th style="width: 20%; text-align: center">Precio Entrada</th>
                   <th style="width: 20%; text-align: center">Precio Venta</th>
                   <th style="width: 5%; text-align: center">#</th>
@@ -120,8 +121,11 @@
                   <td style="width: 30%; text-align: center">
                     SOFA
                   </td>
-                  <td style="width: 20%; text-align: center">
+                  <td style="width: 10%; text-align: center">
                     SALA
+                  </td>
+                  <td style="width: 10%; text-align: center">
+                    1
                   </td>
                   <td style="width: 20%; text-align: center">
                     250000
@@ -142,6 +146,9 @@
                   </td>
                   <td style="width: 20%; text-align: center">
                     ALCOBA
+                  </td>
+                  <td style="width: 10%; text-align: center">
+                    2
                   </td>
                   <td style="width: 20%; text-align: center">
                     400000
