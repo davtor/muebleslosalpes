@@ -26,7 +26,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <script type="text/javascript" src="js/carritoCompras.js"></script>
   </head>
 
   <body>
@@ -46,39 +46,39 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="http://localhost:8084/mueblesAlpes/index.jsp">Inicio</a></li>
+            <li class="active"><a href="http://localhost:8080/mueblesAlpes/index.jsp">Inicio</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administraci&oacute;n <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="http://localhost:8084/mueblesAlpes/vistas/creacionClientes.jsp">Creacion De Clientes</a></li>
-                <li><a href="http://localhost:8084/mueblesAlpes/vistas/eliminacionClientes.jsp">Eliminar Cliente</a></li>
-                <li><a href="http://localhost:8084/mueblesAlpes/vistas/consultarClientes.jsp">Consulta de Clientes</a></li>
+                <li><a href="http://localhost:8080/mueblesAlpes/vistas/creacionClientes.jsp">Creacion De Clientes</a></li>
+                <li><a href="http://localhost:8080/mueblesAlpes/vistas/eliminacionClientes.jsp">Eliminar Cliente</a></li>
+                <li><a href="http://localhost:8080/mueblesAlpes/vistas/consultarClientes.jsp">Consulta de Clientes</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Productos <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="http://localhost:8084/mueblesAlpes/vistas/creacionProducto.jsp">Creacion De Productos</a></li>
-                <li><a href="http://localhost:8084/mueblesAlpes/vistas/edicionProductos.jsp">Edicion De Productos</a></li>
-                <li><a href="http://localhost:8084/mueblesAlpes/vistas/eliminacionProductos.jsp">Eliminacion De Productos</a></li>
-                <li><a href="http://localhost:8084/mueblesAlpes/vistas/consultaProductos.jsp">Consulta De Productos</a></li>
-                <li><a href="http://localhost:8084/mueblesAlpes/vistas/registroPreciosProductos.jsp">Registro De Precios</a></li>
+                <li><a href="http://localhost:8080/mueblesAlpes/vistas/creacionProducto.jsp">Creacion De Productos</a></li>
+                <li><a href="http://localhost:8080/mueblesAlpes/vistas/edicionProductos.jsp">Edicion De Productos</a></li>
+                <li><a href="http://localhost:8080/mueblesAlpes/vistas/eliminacionProductos.jsp">Eliminacion De Productos</a></li>
+                <li><a href="http://localhost:8080/mueblesAlpes/vistas/consultaProductos.jsp">Consulta De Productos</a></li>
+                <li><a href="http://localhost:8080/mueblesAlpes/vistas/registroPreciosProductos.jsp">Registro De Precios</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reportes <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="http://localhost:8084/mueblesAlpes/vistas/ventasDiarias.jsp">Ventas Diarias</a></li>
-                <li><a href="http://localhost:8084/mueblesAlpes/vistas/productomasVendido.jsp">Producto Mas Vendido</a></li>
-                <li><a href="http://localhost:8084/mueblesAlpes/vistas/comprasporCliente.jsp">Compras Por Cliente</a></li>
-                <li><a href="http://localhost:8084/mueblesAlpes/vistas/listadoProductos.jsp">Listado De Productos</a></li>
+                <li><a href="http://localhost:8080/mueblesAlpes/vistas/ventasDiarias.jsp">Ventas Diarias</a></li>
+                <li><a href="http://localhost:8080/mueblesAlpes/vistas/productomasVendido.jsp">Producto Mas Vendido</a></li>
+                <li><a href="http://localhost:8080/mueblesAlpes/vistas/comprasporCliente.jsp">Compras Por Cliente</a></li>
+                <li><a href="http://localhost:8080/mueblesAlpes/vistas/listadoProductos.jsp">Listado De Productos</a></li>
               </ul>
             </li>
             <li><a href="#">Ingresar</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-shopping-cart"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Pagar</a></li>
+                <li><a href="http://localhost:8080/mueblesAlpes/vistas/pagar.jsp">Pagar</a></li>
               </ul>
             </li>
           </ul>
@@ -177,37 +177,61 @@
       <!-- Portfolio Section -->
       <div class="row">
         <div class="col-lg-12">
-          <h2 class="page-header">Portfolio Heading</h2>
+          <h2 class="page-header">Portafolio Productos</h2>
         </div>
         <div class="col-md-4 col-sm-6">
-          <a href="portfolio-item.html">
-            <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-          </a>
+          <img id="cama" class="img-responsive img-portfolio img-hover" src="http://localhost:8080/mueblesAlpes/imagenes/cama.jpeg" alt="">
+          <div class="caption">
+            <h3>Cama</h3>
+            <button type="button" class="btn btn-default" onclick="f_setCookie('cama')">
+              <span class="glyphicon glyphicon-plus-sign"> Comprar</span>
+            </button>
+          </div>
         </div>
         <div class="col-md-4 col-sm-6">
-          <a href="portfolio-item.html">
-            <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-          </a>
+          <img id="sofa" class="img-responsive img-portfolio img-hover" src="http://localhost:8080/mueblesAlpes/imagenes/sofa.jpeg" alt="">
+          <div class="caption">
+            <h3>Sofa</h3>
+            <button type="button" class="btn btn-default" onclick="f_setCookie('sofa')">
+              <span class="glyphicon glyphicon-plus-sign"> Comprar</span>
+            </button>
+          </div>
         </div>
         <div class="col-md-4 col-sm-6">
-          <a href="portfolio-item.html">
-            <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-          </a>
+          <img id="comedor" class="img-responsive img-portfolio img-hover" src="http://localhost:8080/mueblesAlpes/imagenes/comedor.jpg" alt="">
+          <div class="caption">
+            <h3>Comedor</h3>
+            <button type="button" class="btn btn-default" onclick="f_setCookie('comedor')">
+              <span class="glyphicon glyphicon-plus-sign"> Comprar</span>
+            </button>
+          </div>
         </div>
         <div class="col-md-4 col-sm-6">
-          <a href="portfolio-item.html">
-            <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-          </a>
+          <img id="juegoSala" class="img-responsive img-portfolio img-hover" src="http://localhost:8080/mueblesAlpes/imagenes/juegoSala.jpg" alt="">
+          <div class="caption">
+            <h3>Juego de Sala</h3>
+            <button type="button" class="btn btn-default" onclick="f_setCookie('juegoSala')">
+              <span class="glyphicon glyphicon-plus-sign"> Comprar</span>
+            </button>
+          </div>
         </div>
         <div class="col-md-4 col-sm-6">
-          <a href="portfolio-item.html">
-            <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-          </a>
+          <img id="ordenador" class="img-responsive img-portfolio img-hover" src="http://localhost:8080/mueblesAlpes/imagenes/ordenador.jpg" alt="">
+          <div class="caption">
+            <h3>Ordenador</h3>
+            <button type="button" class="btn btn-default" onclick="f_setCookie('ordenador')">
+              <span class="glyphicon glyphicon-plus-sign"> Comprar</span>
+            </button>
+          </div>
         </div>
         <div class="col-md-4 col-sm-6">
-          <a href="portfolio-item.html">
-            <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-          </a>
+          <img id="silla" class="img-responsive img-portfolio img-hover" src="http://localhost:8080/mueblesAlpes/imagenes/silla.jpg" alt="">
+          <div class="caption">
+            <h3>Silla</h3>
+            <button type="button" class="btn btn-default" onclick="f_setCookie('silla')">
+              <span class="glyphicon glyphicon-plus-sign"> Comprar</span>
+            </button>
+          </div>
         </div>
       </div>
       <!-- /.row -->
@@ -272,9 +296,9 @@
 
     <!-- Script to Activate the Carousel -->
     <script>
-      $('.carousel').carousel({
-        interval: 5000 //changes the speed
-      })
+              $('.carousel').carousel({
+                interval: 5000 //changes the speed
+              })
     </script>
 
   </body>
