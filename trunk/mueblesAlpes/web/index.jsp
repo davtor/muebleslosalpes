@@ -26,64 +26,27 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <!--<script type="text/javascript" src="js/jquery.cookie.js"></script>-->
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/carritoCompras.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        f_LoadMenu();
+      });
+    </script>
   </head>
 
   <body>
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">Muebles Los Alpes</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="http://localhost:8080/mueblesAlpes/index.jsp">Inicio</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administraci&oacute;n <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="http://localhost:8080/mueblesAlpes/vistas/creacionClientes.jsp">Creacion De Clientes</a></li>
-                <li><a href="http://localhost:8080/mueblesAlpes/vistas/eliminacionClientes.jsp">Eliminar Cliente</a></li>
-                <li><a href="http://localhost:8080/mueblesAlpes/vistas/consultarClientes.jsp">Consulta de Clientes</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Productos <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="http://localhost:8080/mueblesAlpes/vistas/creacionProducto.jsp">Creacion De Productos</a></li>
-                <li><a href="http://localhost:8080/mueblesAlpes/vistas/edicionProductos.jsp">Edicion De Productos</a></li>
-                <li><a href="http://localhost:8080/mueblesAlpes/vistas/eliminacionProductos.jsp">Eliminacion De Productos</a></li>
-                <li><a href="http://localhost:8080/mueblesAlpes/vistas/consultaProductos.jsp">Consulta De Productos</a></li>
-                <li><a href="http://localhost:8080/mueblesAlpes/vistas/registroPreciosProductos.jsp">Registro De Precios</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reportes <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="http://localhost:8080/mueblesAlpes/vistas/ventasDiarias.jsp">Ventas Diarias</a></li>
-                <li><a href="http://localhost:8080/mueblesAlpes/vistas/productomasVendido.jsp">Producto Mas Vendido</a></li>
-                <li><a href="http://localhost:8080/mueblesAlpes/vistas/comprasporCliente.jsp">Compras Por Cliente</a></li>
-                <li><a href="http://localhost:8080/mueblesAlpes/vistas/listadoProductos.jsp">Listado De Productos</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Ingresar</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-shopping-cart"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="http://localhost:8080/mueblesAlpes/vistas/pagar.jsp">Pagar</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+      <div class="container" id="cabecera">
+
       </div>
       <!-- /.container -->
     </nav>
@@ -184,7 +147,7 @@
           <div class="caption">
             <h3>Cama</h3>
             <button type="button" class="btn btn-default" onclick="f_setCookie('cama')">
-              <span class="glyphicon glyphicon-plus-sign"> Comprar</span>
+              <span class="glyphicon glyphicon-plus-sign" id="camaI"> Comprar</span>
             </button>
           </div>
         </div>
@@ -193,7 +156,7 @@
           <div class="caption">
             <h3>Sofa</h3>
             <button type="button" class="btn btn-default" onclick="f_setCookie('sofa')">
-              <span class="glyphicon glyphicon-plus-sign"> Comprar</span>
+              <span class="glyphicon glyphicon-plus-sign" id="sofaI"> Comprar</span>
             </button>
           </div>
         </div>
@@ -202,7 +165,7 @@
           <div class="caption">
             <h3>Comedor</h3>
             <button type="button" class="btn btn-default" onclick="f_setCookie('comedor')">
-              <span class="glyphicon glyphicon-plus-sign"> Comprar</span>
+              <span class="glyphicon glyphicon-plus-sign" id="comedorI"> Comprar</span>
             </button>
           </div>
         </div>
@@ -211,7 +174,7 @@
           <div class="caption">
             <h3>Juego de Sala</h3>
             <button type="button" class="btn btn-default" onclick="f_setCookie('juegoSala')">
-              <span class="glyphicon glyphicon-plus-sign"> Comprar</span>
+              <span class="glyphicon glyphicon-plus-sign" id="juegoSalaI"> Comprar</span>
             </button>
           </div>
         </div>
@@ -220,7 +183,7 @@
           <div class="caption">
             <h3>Ordenador</h3>
             <button type="button" class="btn btn-default" onclick="f_setCookie('ordenador')">
-              <span class="glyphicon glyphicon-plus-sign"> Comprar</span>
+              <span class="glyphicon glyphicon-plus-sign" id="ordenadorI"> Comprar</span>
             </button>
           </div>
         </div>
@@ -229,7 +192,7 @@
           <div class="caption">
             <h3>Silla</h3>
             <button type="button" class="btn btn-default" onclick="f_setCookie('silla')">
-              <span class="glyphicon glyphicon-plus-sign"> Comprar</span>
+              <span class="glyphicon glyphicon-plus-sign" id="sillaI"> Comprar</span>
             </button>
           </div>
         </div>
@@ -288,17 +251,12 @@
     </div>
     <!-- /.container -->
 
-    <!-- jQuery Version 1.11.0 -->
-    <script src="js/jquery-1.11.0.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
 
     <!-- Script to Activate the Carousel -->
     <script>
-              $('.carousel').carousel({
-                interval: 5000 //changes the speed
-              })
+      $('.carousel').carousel({
+        interval: 5000 //changes the speed
+      });
     </script>
 
   </body>
