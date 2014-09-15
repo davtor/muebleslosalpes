@@ -32,63 +32,23 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- jQuery Version 1.11.0 -->
+    <script src="../js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        f_LoadMenu();
+      });
+    </script>
   </head>
 
   <body>
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">Muebles Los Alpes</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="http://localhost:8084/mueblesAlpes/index.jsp">Inicio</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administraci&oacute;n <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="http://localhost:8084/mueblesAlpes/vistas/creacionClientes.jsp">Creacion De Clientes</a></li>
-                <li><a href="http://localhost:8084/mueblesAlpes/vistas/eliminacionClientes.jsp">Eliminar Cliente</a></li>
-                <li><a href="http://localhost:8084/mueblesAlpes/vistas/consultarClientes.jsp">Consulta de Clientes</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Productos <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="http://localhost:8084/mueblesAlpes/vistas/creacionProducto.jsp">Creacion De Productos</a></li>
-                <li><a href="http://localhost:8084/mueblesAlpes/vistas/edicionProductos.jsp">Edicion De Productos</a></li>
-                <li><a href="http://localhost:8084/mueblesAlpes/vistas/eliminacionProductos.jsp">Eliminacion De Productos</a></li>
-                <li><a href="http://localhost:8084/mueblesAlpes/vistas/consultaProductos.jsp">Consulta De Productos</a></li>
-                <li><a href="http://localhost:8084/mueblesAlpes/vistas/registroPreciosProductos.jsp">Registro De Precios</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reportes <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="http://localhost:8084/mueblesAlpes/vistas/ventasDiarias.jsp">Ventas Diarias</a></li>
-                <li><a href="http://localhost:8084/mueblesAlpes/vistas/productomasVendido.jsp">Producto Mas Vendido</a></li>
-                <li><a href="http://localhost:8084/mueblesAlpes/vistas/comprasporCliente.jsp">Compras Por Cliente</a></li>
-                <li><a href="http://localhost:8084/mueblesAlpes/vistas/listadoProductos.jsp">Listado De Productos</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Ingresar</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-shopping-cart"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Pagar</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+      <div class="container" id="cabecera">
       </div>
       <!-- /.container -->
     </nav>
@@ -180,11 +140,6 @@
     </div>
     <!-- /.container -->
 
-    <!-- jQuery Version 1.11.0 -->
-    <script src="../js/jquery-1.11.0.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../js/bootstrap.min.js"></script>
   </body>
 
 </html>
