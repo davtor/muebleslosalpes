@@ -31,7 +31,8 @@ public class creacionClientesServlet extends HttpServlet {
     response.setContentType("text/html;charset=UTF-8");
     PrintWriter out = response.getWriter();
     try {
-      response.sendRedirect("vistas/creacionClientes.jsp?respuesta=si&cliente=" + cliente.getPrimerNombre());
+       String mensaje = "Se creo con exito el cliente:";
+      response.sendRedirect("vistas/creacionClientes.jsp?respuesta=si&cliente=" + cliente.getPrimerNombre()+"&mensaje="+mensaje);
     } finally {
       out.close();
     }
