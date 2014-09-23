@@ -1,6 +1,6 @@
+
 package com.mueblesAlpes.Servlets;
 
-import com.mueblesAlpes.Beans.ProductoBean;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -15,10 +15,8 @@ import javax.servlet.http.HttpServletResponse;
  */
 
 
-@WebServlet(name = "CreacionProductoServlet", urlPatterns = {"/CreacionProductoServlet"})
-public class CreacionProductoServlet extends HttpServlet {
-
-    private ProductoBean producto = new ProductoBean();
+@WebServlet(name = "EliminacionClienteServlet", urlPatterns = {"/EliminacionClienteServlet"})
+public class EliminacionClienteServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,8 +32,9 @@ public class CreacionProductoServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-            String mensaje = "secreo con exito el producto";
-            response.sendRedirect("vistas/creacionProducto.jsp?respuesta=si&cliente=" + producto.getNombre() + "&mensaje="+mensaje);
+            /* TODO output your page here. You may use following sample code. */
+            String mensaje = "se ha eliminado con exito";
+            response.sendRedirect("vistas/eliminacionClientes.jsp?respuesta=si&mensaje="+mensaje);
         } finally {
             out.close();
         }
@@ -68,15 +67,7 @@ public class CreacionProductoServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        
-        producto.setCodigoP(request.getParameter("codigo_mueble"));
-        producto.setNombre(request.getParameter("codigoP"));
-        producto.setIdtipoMueble(Integer.parseInt(request.getParameter("idtipoMueble")));
-        producto.setCantidad(Integer.parseInt(request.getParameter("cantidad")));
-        processRequest(request, response);
     }
-    
-    
 
     /**
      * Returns a short description of the servlet.

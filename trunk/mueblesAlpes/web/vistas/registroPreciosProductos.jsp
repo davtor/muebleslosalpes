@@ -1,13 +1,8 @@
 <%-- 
-    Document   : eliminacionProductos
+    Document   : edicionProductos
     Created on : 02-sep-2014, 8:29:21
     Author     : open12
 --%>
-<%
-    String respuesta = request.getParameter("respuesta") == null ? "" : request.getParameter("respuesta");
-    String mensaje = request.getParameter("mensaje") == null ? "" : request.getParameter("mensaje");
-
-%>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -36,49 +31,16 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
     <!-- jQuery Version 1.11.0 -->
     <script src="../js/jquery-1.11.0.js"></script>
-    <script src="../librerias/js/blockUI.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/menu.js"></script>
-            <style type="tect/css">
-            div.growlUI { background: url(../imagenes/check48.png) no-repeat 10px 10px}
-            div.growlUI h1, div.growlUI h2 {
-                color: white; 
-                padding: 20px 5px 5px 75px; 
-                text-align: left; 
-                font: 200% sans-serif; 
-            }
-        </style>
     <script type="text/javascript">
       $(document).ready(function() {
         f_LoadMenu();
-         if ("<%= respuesta.toString()%>" === "si") {
-                    $.growlUI('<%=mensaje.toString()%>');
-                    $.blockUI({
-                        message: $('div.growlUI'),
-                        fadeIn: 700,
-                        fadeOut: 700,
-                        timeout: 2000,
-                        showOverlay: false,
-                        centerY: false,
-                        css: {
-                            width: '350px',
-                            top: '60px',
-                            left: '',
-                            right: '10px',
-                            border: 'none',
-                            padding: '5px',
-                            backgroundColor: '#000',
-                            '-webkit-border-radius': '10px',
-                            '-moz-border-radius': '10px',
-                            opacity: .6,
-                            color: '#fff'
-                        }
-                    });
-                }
       });
     </script>
   </head>
@@ -95,19 +57,19 @@
 
       <!-- Marketing Icons Section -->
       <div class="row">
-          <form class="form-horizontal" role="form" action="../EliminacionProductoServlet">
+        <form class="form-horizontal" role="form">
           <br>
           <fieldset>
-            <legend>Eliminacion de Productos</legend>
+            <legend>Edicion de Productos</legend>
             <table class="table table-hover">
               <thead>
                 <tr>
                   <th style="width: 10%; text-align: center">Codigo</th>
                   <th style="width: 30%; text-align: center">Nombre</th>
-                  <th style="width: 20%; text-align: center">Tipo de Mueble</th>
+                  <th style="width: 10%; text-align: center">Tipo de Mueble</th>
+                  <th style="width: 10%; text-align: center">cantidad</th>
                   <th style="width: 20%; text-align: center">Precio Entrada</th>
                   <th style="width: 20%; text-align: center">Precio Venta</th>
-                  <th style="width: 5%; text-align: center">#</th>
                 </tr>
               </thead>
               <tbody>
@@ -118,14 +80,17 @@
                   <td style="width: 30%; text-align: center">
                     SOFA
                   </td>
-                  <td style="width: 20%; text-align: center">
+                  <td style="width: 10%; text-align: center">
                     SALA
                   </td>
-                  <td style="width: 20%; text-align: center">
-                    250000
+                  <td style="width: 10%; text-align: center">
+                    1
                   </td>
                   <td style="width: 20%; text-align: center">
-                    350000
+                      <input type="text" name="valor" value="250000"> 
+                  </td>
+                  <td style="width: 20%; text-align: center">
+                    <input type="text" name="valor" value="350000"> 
                   </td>
                   <td style="width: 5%; text-align: center">
                     <input type="checkbox">
@@ -141,11 +106,14 @@
                   <td style="width: 20%; text-align: center">
                     ALCOBA
                   </td>
-                  <td style="width: 20%; text-align: center">
-                    400000
+                  <td style="width: 10%; text-align: center">
+                    2
                   </td>
                   <td style="width: 20%; text-align: center">
-                    600000
+                    <input type="text" name="valor" value="400000"> 
+                  </td>
+                  <td style="width: 20%; text-align: center">
+                    <input type="text" name="valor" value="600000">  
                   </td>
                   <td style="width: 5%; text-align: center">
                     <input type="checkbox">
@@ -153,7 +121,7 @@
                 </tr>
               </tbody>
             </table>
-            <input type="submit" value="Eliminar" class="btn btn-default">
+            <input type="submit" value="Editar" class="btn btn-default">
           </fieldset>
         </form>
       </div>
@@ -170,7 +138,6 @@
 
     </div>
     <!-- /.container -->
-
 
   </body>
 
