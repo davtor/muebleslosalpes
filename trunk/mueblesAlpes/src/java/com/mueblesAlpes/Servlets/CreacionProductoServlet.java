@@ -34,8 +34,8 @@ public class CreacionProductoServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-            /* TODO output your page here. You may use following sample code. */
-            response.sendRedirect("vistas/cracionProductos.jsp?respuesta=si&cliente=" + producto.getNombre());
+            String mensaje = "secreo con exito el producto";
+            response.sendRedirect("vistas/cracionProductos.jsp?respuesta=si&cliente=" + producto.getNombre() + "&mensaje="+mensaje);
         } finally {
             out.close();
         }
