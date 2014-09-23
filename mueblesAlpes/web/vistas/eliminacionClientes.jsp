@@ -1,3 +1,14 @@
+<%-- 
+    Document   : creacionProducto
+    Created on : 1/09/2014, 02:44:53 PM
+    Author     : davtor
+--%>
+<%
+    String respuesta = request.getParameter("respuesta") == null ? "" : request.getParameter("respuesta");
+    String mensaje = request.getParameter("mensaje") == null ? "" : request.getParameter("mensaje");
+
+%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -30,17 +41,50 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- jQuery Version 1.11.0 -->
-    <script src="../js/jquery-1.11.0.js"></script>
+    <script src="../js/jquery-1.11.0.js"></script><script src="../librerias/js/blockUI.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../librerias/DataTables-1.10.2/media/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="../librerias/js/integracion.js"></script>
     <script type="text/javascript" src="../js/menu.js"></script>
+        <style type="tect/css">
+            div.growlUI { background: url(../imagenes/check48.png) no-repeat 10px 10px}
+            div.growlUI h1, div.growlUI h2 {
+                color: white; 
+                padding: 20px 5px 5px 75px; 
+                text-align: left; 
+                font: 200% sans-serif; 
+            }
+        </style>
     <script type="text/javascript">
       $(document).ready(function() {
         $('#datatable').dataTable();
         f_LoadMenu();
+        if ("<%= respuesta.toString()%>" === "si") {
+                    $.growlUI('<%=mensaje.toString()%>');
+                    $.blockUI({
+                        message: $('div.growlUI'),
+                        fadeIn: 700,
+                        fadeOut: 700,
+                        timeout: 2000,
+                        showOverlay: false,
+                        centerY: false,
+                        css: {
+                            width: '350px',
+                            top: '60px',
+                            left: '',
+                            right: '10px',
+                            border: 'none',
+                            padding: '5px',
+                            backgroundColor: '#000',
+                            '-webkit-border-radius': '10px',
+                            '-moz-border-radius': '10px',
+                            opacity: .6,
+                            color: '#fff'
+                        }
+                    });
+                }
       });
     </script>
   </head>
@@ -57,7 +101,7 @@
 
       <!-- Marketing Icons Section -->
       <div class="row">
-        <form class="form-horizontal" role="form">
+          <form class="form-horizontal" role="form" action="../EliminacionClienteServlet">
           <br>
           <fieldset>
             <legend>Eliminacion de Clientes</legend>

@@ -57,7 +57,7 @@
            $(document).ready(function() {
                 f_LoadMenu();
                 if ("<%= respuesta.toString()%>" === "si") {
-                    $.growlUI('<%=mensaje.toString()%>', '<%= producto.toString()%>')
+                    $.growlUI('<%=mensaje.toString()%>', '<%= producto.toString()%>');
                     $.blockUI({
                         message: $('div.growlUI'),
                         fadeIn: 700,
@@ -100,7 +100,7 @@
             <fieldset> 
                 <legend> Mis Productos</legend>
 
-                <form class="form-horizontal" role="form">
+                <form class="form-horizontal" role="form" action="../CreacionProductoServlet">
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="codigo_mueble" class="col-lg-10 control-label">Codigo del mueble</label>
