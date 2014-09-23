@@ -3,7 +3,12 @@
     Created on : 1/09/2014, 02:44:53 PM
     Author     : davtor
 --%>
+<%
+    String respuesta = request.getParameter("respuesta") == null ? "" : request.getParameter("respuesta");
+    String producto = request.getParameter("producto") == null ? "" : request.getParameter("producto");
+    String mensaje = request.getParameter("mensaje") == null ? "" : request.getParameter("mensaje");
 
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +19,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Creacion de Clientes</title>
+        <title>Creacion de Producto</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -34,15 +39,50 @@
 
         <!-- jQuery Version 1.11.0 -->
         <script src="../js/jquery-1.11.0.js"></script>
+        <script src="../librerias/js/blockUI.js"></script>
 
         <!-- Bootstrap Core JavaScript -->
         <script src="../js/bootstrap.min.js"></script>
         <script type="text/javascript" src="../js/menu.js"></script>
+        <style type="tect/css">
+            div.growlUI { background: url(../imagenes/check48.png) no-repeat 10px 10px}
+            div.growlUI h1, div.growlUI h2 {
+                color: white; 
+                padding: 20px 5px 5px 75px; 
+                text-align: left; 
+                font: 200% sans-serif; 
+            }
+        </style>
         <script type="text/javascript">
-            $(document).ready(function () {
+           $(document).ready(function() {
                 f_LoadMenu();
+                if ("<%= respuesta.toString()%>" === "si") {
+                    $.growlUI('<%=mensaje.toString()%>', '<%= producto.toString()%>')
+                    $.blockUI({
+                        message: $('div.growlUI'),
+                        fadeIn: 700,
+                        fadeOut: 700,
+                        timeout: 2000,
+                        showOverlay: false,
+                        centerY: false,
+                        css: {
+                            width: '350px',
+                            top: '60px',
+                            left: '',
+                            right: '10px',
+                            border: 'none',
+                            padding: '5px',
+                            backgroundColor: '#000',
+                            '-webkit-border-radius': '10px',
+                            '-moz-border-radius': '10px',
+                            opacity: .6,
+                            color: '#fff'
+                        }
+                    });
+                }
             });
         </script>
+        
     </head>
 
 </head>
@@ -66,7 +106,7 @@
                             <label for="codigo_mueble" class="col-lg-10 control-label">Codigo del mueble</label>
                             <div class="col-lg-12">
                                 <input type="text" class="form-control" id="codigo_mueble"
-                                       placeholder="codigo_producto">
+                                       placeholder="codigo_producto" name="codigoP">
                             </div>
                         </div>
                     </div>
@@ -75,7 +115,7 @@
                             <label for="nombre" class="col-lg-9 control-label">Nombre</label>
                             <div class="col-lg-12">
                                 <input type="text" class="form-control" id="nombre"
-                                       placeholder="sofa cama">
+                                       placeholder="sofa cama" name="nombre">
                             </div>
                         </div>
                     </div>
@@ -84,7 +124,7 @@
                         <div class="form-group">
                             <label for="tipo_mueble" class="col-lg-10 control-label">Tipo de mueble</label>
                             <div class="col-lg-12">
-                                <select class="form-control">
+                                <select class="form-control" name="idtipoMueble">
                                     <option>comedor</option>
                                     <option>sala extranjera</option>
                                     <option>bife</option>                
@@ -98,7 +138,7 @@
                             <label for="cantidad" class="col-lg-10 control-label">Cantidad</label>
                             <div class="col-lg-12">
                                 <input type="text" class="form-control" id="cantidad"
-                                       placeholder="001">
+                                       placeholder="001" name="cantidad">
                             </div>
                         </div>
                     </div>
