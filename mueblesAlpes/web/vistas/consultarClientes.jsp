@@ -59,18 +59,18 @@
         <fieldset>       
           <legend>Consulta</legend>
           <label> Digite su documento de identificacion</label>
-          <form class="form-horizontal" role="form">
+          <form class="form-horizontal" role="form" action="../ConsultarClienteServlet" method="post">
             <div class="form-group">
               <div class="col-xs-6">
                 <label for="numero_id" class="col-lg-5 control-label">Numero ID</label>
                 <div class="col-lg-7">
                   <input type="text" class="form-control" id="numero_id"
-                         placeholder="numero id">
+                         placeholder="numero id" name="numero_id">
                 </div>
               </div>
               <div class="col-xs-6">
                 <div class="col-lg-9">
-                  <button type="button" class="btn btn-default">
+                    <button type="submit" class="btn btn-default">
                     <span class="glyphicon glyphicon-search"> Buscar</span>
                   </button>
                 </div>
