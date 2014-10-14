@@ -57,7 +57,7 @@
 
       <!-- Marketing Icons Section -->
       <div class="row">
-        <form class="form-horizontal" role="form">
+          <form class="form-horizontal" role="form" action="../EdicionProductoServlet" method="post">
           <br>
           <fieldset>
             <legend>Edicion de Productos</legend>

@@ -7,6 +7,7 @@
     String respuesta = request.getParameter("respuesta") == null ? "" : request.getParameter("respuesta");
     String producto = request.getParameter("producto") == null ? "" : request.getParameter("producto");
     String mensaje = request.getParameter("mensaje") == null ? "" : request.getParameter("mensaje");
+    String productoId = request.getParameter("productoId") == null ? "" : request.getParameter("productoId");
 
 %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -153,7 +154,17 @@
             </fieldset>
         </div>
     </div>
-
+    <%
+    if(productoId!=""){
+       %> 
+       <script type="text/javascript">
+           document.getElementById("codigo_mueble").value="11tt";
+           document.getElementById("nombre").value="sofa cama";
+           document.getElementById("cantidad").value="010";
+       </script>
+       <%
+    }
+    %>
 </body>
 
 </html>
