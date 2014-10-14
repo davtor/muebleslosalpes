@@ -1,6 +1,6 @@
 package com.mueblesAlpes.Servlets;
 
-import com.mueblesAlpes.Beans.clienteBean;
+import com.mueblesAlpes.Beans.ClienteBean;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "creacionClientesServlet", urlPatterns = {"/creacionClientesServlet"})
 public class creacionClientesServlet extends HttpServlet {
 
-  private clienteBean cliente = new clienteBean();
+  private ClienteBean cliente = new ClienteBean();
 
   /**
    * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.

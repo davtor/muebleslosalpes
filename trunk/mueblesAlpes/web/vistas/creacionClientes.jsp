@@ -7,7 +7,7 @@
     String respuesta = request.getParameter("respuesta") == null ? "" : request.getParameter("respuesta");
     String cliente = request.getParameter("cliente") == null ? "" : request.getParameter("cliente");
     String mensaje = request.getParameter("mensaje") == null ? "" : request.getParameter("mensaje");
-
+    String id = request.getParameter("id") == null ? "" : request.getParameter("id");
 %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -178,7 +178,7 @@
                                 <div class="form-group">   
                                     <label for="FechaNacimiento" class="col-lg-4 control-label">Fecha de Nacimiento</label>
                                     <div class="col-lg-4">
-                                        <input type="date" name="fechaNacimiento">
+                                        <input type="date" name="fechaNacimiento" id="fechaNacimiento">
                                     </div>
                                 </div>            
                             </div> 
@@ -194,7 +194,7 @@
 
                             <div class="form-group">
                                 <div class="col-lg-offset-2 col-lg-10">
-                                    <button type="submit" class="btn btn-default">Aceptar</button>
+                                    <button type="submit" class="btn btn-default" id="aceptar">Aceptar</button>
                                 </div>
                             </div>
                         </div> 
@@ -202,7 +202,21 @@
                 </fieldset>
             </div>
         </div>
-
+        <%
+            if (id != "") {
+        %>
+        <script type="text/javascript">
+            document.getElementById("primer_nombre").value = "Juan";
+            document.getElementById("Segundo_nombreo").value = "Camilo";
+            document.getElementById("primer_apellido").value = "Torres";
+            document.getElementById("numero_de_documento").value = "<%=id.toString()%>";
+            document.getElementById("numero_de_celular").value = "31222222222";
+            document.getElementById("fechaNacimiento").value = "1991-10-10";
+            $("#aceptar").hide();
+        </script>
+        <%
+            }
+        %>
     </body>
 </html>
 
