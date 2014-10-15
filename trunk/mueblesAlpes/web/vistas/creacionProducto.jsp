@@ -8,6 +8,7 @@
     String producto = request.getParameter("producto") == null ? "" : request.getParameter("producto");
     String mensaje = request.getParameter("mensaje") == null ? "" : request.getParameter("mensaje");
     String productoId = request.getParameter("productoId") == null ? "" : request.getParameter("productoId");
+    String idProducto = request.getParameter("idProducto") == null ? "" : request.getParameter("idProducto");
 
 %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -146,7 +147,7 @@
                     
                         <div class="form-group">
                             <div class="col-lg-offset-2 col-lg-10">
-                                <button type="submit" class="btn btn-default">Aceptar</button>
+                                <button type="submit" class="btn btn-default" id="aceptar">Aceptar</button>
                             </div>
                         </div>
                    
@@ -165,6 +166,19 @@
        <%
     }
     %>
+    <%
+    if(idProducto!=""){
+       %> 
+       <script type="text/javascript">
+           document.getElementById("codigo_mueble").value="11tt";
+           document.getElementById("nombre").value="sofa cama";
+           document.getElementById("cantidad").value="010";
+            $("#aceptar").hide();
+       </script>
+       <%
+    }
+    %>
+    
 </body>
 
 </html>
