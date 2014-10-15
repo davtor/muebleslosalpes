@@ -1,8 +1,13 @@
 <%-- 
-    Document   : edicionProductos
+    Document   : registroPrecios
     Created on : 02-sep-2014, 8:29:21
     Author     : open12
 --%>
+<%
+  String respuesta = request.getParameter("respuesta") == null ? "" : request.getParameter("respuesta");
+  String mensaje = request.getParameter("mensaje") == null ? "" : request.getParameter("mensaje");
+
+%>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -37,10 +42,45 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery-1.11.0.js"></script>
+    <script src="../librerias/js/blockUI.js"></script>
+    <style type="tect/css">
+      div.growlUI { background: url(../imagenes/check48.png) no-repeat 10px 10px}
+      div.growlUI h1, div.growlUI h2 {
+        color: white; 
+        padding: 20px 5px 5px 75px; 
+        text-align: left; 
+        font: 200% sans-serif; 
+      }
+    </style>
     <script type="text/javascript" src="../js/menu.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
         f_LoadMenu();
+        if ("<%= respuesta.toString()%>" === "si") {
+          $.growlUI('<%=mensaje.toString()%>');
+          $.blockUI({
+            message: $('div.growlUI'),
+            fadeIn: 700,
+            fadeOut: 700,
+            timeout: 2000,
+            showOverlay: false,
+            centerY: false,
+            css: {
+              width: '350px',
+              top: '60px',
+              left: '',
+              right: '10px',
+              border: 'none',
+              padding: '5px',
+              backgroundColor: '#000',
+              '-webkit-border-radius': '10px',
+              '-moz-border-radius': '10px',
+              opacity: .6,
+              color: '#fff'
+            }
+          });
+        }
       });
     </script>
   </head>
@@ -57,10 +97,10 @@
 
       <!-- Marketing Icons Section -->
       <div class="row">
-        <form class="form-horizontal" role="form">
+        <form class="form-horizontal" role="form" action="../RegistroPreciosProductosServlet" method="POST">
           <br>
           <fieldset>
-            <legend>Edicion de Productos</legend>
+            <legend>Registro de Precios</legend>
             <table class="table table-hover">
               <thead>
                 <tr>
@@ -87,7 +127,7 @@
                     1
                   </td>
                   <td style="width: 20%; text-align: center">
-                      <input type="text" name="valor" value="250000"> 
+                    <input type="text" name="valor" value="250000"> 
                   </td>
                   <td style="width: 20%; text-align: center">
                     <input type="text" name="valor" value="350000"> 
