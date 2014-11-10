@@ -103,16 +103,16 @@
                 <legend> Mis Productos</legend>
 
                 <form class="form-horizontal" role="form" action="../CreacionProductoServlet">
-                    <div class="col-md-4">
+                    <div class="col-md-1">
                         <div class="form-group">
-                            <label for="codigo_mueble" class="col-lg-10 control-label">Codigo del mueble</label>
+                            <label for="codigo_mueble" class="col-lg-10 control-label">Refencia</label>
                             <div class="col-lg-12">
                                 <input type="text" class="form-control" id="codigo_mueble"
                                        placeholder="codigo_producto" name="codigoP">
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-2">
                         <div class="form-group">
                             <label for="nombre" class="col-lg-9 control-label">Nombre</label>
                             <div class="col-lg-12">
@@ -121,30 +121,63 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                         <div class="form-group">
-                            <label for="tipo_mueble" class="col-lg-10 control-label">Tipo de mueble</label>
+                            <label for="descripcion" class="col-lg-9 control-label">Descripcion</label>
+                            <div class="col-lg-12">
+                                <input type="text" class="form-control" id="descripcion"
+                                       placeholder="cama de roble extra fina" name="descripcion">
+                            </div>
+                        </div>
+                    </div>      
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="tipo_mueble" class="col-lg-10 control-label">Tipo</label>
                             <div class="col-lg-12">
                                 <select class="form-control" name="idtipoMueble">
-                                    <option>comedor</option>
-                                    <option>sala extranjera</option>
-                                    <option>bife</option>                
+                                    <option>Interior</option>
+                                    <option>Exterior</option>               
                                 </select>
                             </div>
                         </div>
-                    </div>             
-
+                    </div>  
                     <div class="col-md-1">
                         <div class="form-group">
-                            <label for="cantidad" class="col-lg-10 control-label">Cantidad</label>
+                            <label for="material" class="col-lg-9 control-label">Material</label>
                             <div class="col-lg-12">
-                                <input type="text" class="form-control" id="cantidad"
-                                       placeholder="001" name="cantidad">
+                                <input type="text" class="form-control" id="material"
+                                       placeholder="roble" name="material">
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="dimencion" class="col-lg-9 control-label">Dimencion</label>
+                            <div class="col-lg-12">
+                                <input type="text" class="form-control" id="dimencion"
+                                       placeholder="2.30 m x 2.00 m " name="dimencion">
                             </div>
                         </div>
                     </div>
-                    
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label for="color" class="col-lg-9 control-label">Color</label>
+                            <div class="col-lg-12">
+                                <input type="text" class="form-control" id="color"
+                                       placeholder="cafe" name="color">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label for="peso" class="col-lg-9 control-label">Peso</label>
+                            <div class="col-lg-12">
+                                <input type="text" class="form-control" id="peso"
+                                       placeholder="20 Kilos" name="peso">
+                            </div>
+                        </div>
+                    </div>
+
                         <div class="form-group">
                             <div class="col-lg-offset-2 col-lg-10">
                                 <button type="submit" class="btn btn-default" id="aceptar">Aceptar</button>

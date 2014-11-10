@@ -3,26 +3,33 @@ package com.mueblesAlpes.Beans;
 
 /**
  *
- * @author Administrador
+ * @author 
  */
 
 
 public class ProductoBean {
     private String codigoP;
     private String nombre;
+    private String descripcion;
     private int idtipoMueble;
-    private int cantidad;
+    private String material;
+    private String dimencion;
+     private String color;
+      private String peso;
 
-    public ProductoBean(String codigoP, String nombre, int idtipoMueble, int cantidad) {
+    public ProductoBean(String codigoP, String nombre, String descripcion, int idtipoMueble, String material, String dimencion, String color, String peso) {
         this.codigoP = codigoP;
         this.nombre = nombre;
+        this.descripcion = descripcion;
         this.idtipoMueble = idtipoMueble;
-        this.cantidad = cantidad;
+        this.material = material;
+        this.dimencion = dimencion;
+        this.color = color;
+        this.peso = peso;
     }
-
-    public ProductoBean() {
+    public ProductoBean(){
+        
     }
-
     public String getCodigoP() {
         return codigoP;
     }
@@ -39,6 +46,14 @@ public class ProductoBean {
         this.nombre = nombre;
     }
 
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
     public int getIdtipoMueble() {
         return idtipoMueble;
     }
@@ -47,13 +62,39 @@ public class ProductoBean {
         this.idtipoMueble = idtipoMueble;
     }
 
-    public int getCantidad() {
-        return cantidad;
+    public String getMaterial() {
+        return material;
     }
 
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
+    public void setMaterial(String material) {
+        this.material = material;
     }
+
+    public String getDimencion() {
+        return dimencion;
+    }
+
+    public void setDimencion(String dimencion) {
+        this.dimencion = dimencion;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getPeso() {
+        return peso;
+    }
+
+    public void setPeso(String peso) {
+        this.peso = peso;
+    }
+
+    
     
     
     

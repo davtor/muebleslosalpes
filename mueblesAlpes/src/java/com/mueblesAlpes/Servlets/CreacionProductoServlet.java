@@ -71,8 +71,12 @@ public class CreacionProductoServlet extends HttpServlet {
         
         producto.setCodigoP(request.getParameter("codigo_mueble"));
         producto.setNombre(request.getParameter("codigoP"));
+        producto.setDescripcion(request.getParameter("descripcion"));
         producto.setIdtipoMueble(Integer.parseInt(request.getParameter("idtipoMueble")));
-        producto.setCantidad(Integer.parseInt(request.getParameter("cantidad")));
+        producto.setMaterial(request.getParameter("material"));
+        producto.setDimencion(request.getParameter("dimencion"));
+        producto.setColor(request.getParameter("color"));
+        producto.setPeso(request.getParameter("peso"));
         processRequest(request, response);
     }
     
