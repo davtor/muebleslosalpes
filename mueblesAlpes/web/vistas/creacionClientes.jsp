@@ -158,31 +158,77 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
+                                    <label for="numero_de_telefono" class="col-lg-5 control-label">Numero de telefono</label>
+                                    <div class="col-lg-7">
+                                        <input type="text" class="form-control" id="numero_de_telefono"
+                                               placeholder="Numero de telefono" name="numeroTelefono">
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="col-md-4">
+                                <div class="form-group">
                                     <label for="numero_de_celular" class="col-lg-5 control-label">Numero de celular</label>
                                     <div class="col-lg-7">
                                         <input type="text" class="form-control" id="numero_de_celular"
                                                placeholder="Numero de celular" name="numeroCelular">
                                     </div>
                                 </div>
-                            </div>  
-                            <div class="col-md-3">
+                            </div> 
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="direccion" class="col-lg-5 control-label">Direccion</label>
+                                    <div class="col-lg-7">
+                                        <input type="text" class="form-control" id="direccion"
+                                               placeholder="direccion" name="direccion">
+                                    </div>
+                                </div>
+                            </div> 
+                             <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="ciudad" class="col-lg-5 control-label">Ciudad</label>
+                                    <div class="col-lg-7">
+                                        <input type="text" class="form-control" id="ciudad"
+                                               placeholder="bogota" name="ciudad">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="departamento" class="col-lg-5 control-label">Departamento</label>
+                                    <div class="col-lg-7">
+                                        <input type="text" class="form-control" id="departamento"
+                                               placeholder="Cundinamarca" name="departamento">
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="pais" class="col-lg-5 control-label">Pais</label>
+                                    <div class="col-lg-7">
+                                        <input type="text" class="form-control" id="pais"
+                                               placeholder="Colombia" name="pais">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="profesion" class="col-lg-5 control-label">Profesion</label>
+                                    <div class="col-lg-7">
+                                        <input type="text" class="form-control" id="profesion"
+                                               placeholder="profesion" name="profesion">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="ejemplo_email_3" class="col-lg-2 control-label">Email</label>
                                     <div class="col-lg-10">
-                                        <input type="email" class="form-control" id="ejemplo_email_3"
+                                        <input type="email" class="form-control" id="email"
                                                placeholder="Email" name="email">
                                     </div> 
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="form-group">   
-                                    <label for="FechaNacimiento" class="col-lg-4 control-label">Fecha de Nacimiento</label>
-                                    <div class="col-lg-4">
-                                        <input type="date" name="fechaNacimiento" id="fechaNacimiento">
-                                    </div>
-                                </div>            
-                            </div> 
-                            <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="ejemplo_password_3" class="col-lg-4 control-label">Contraseña</label>
                                     <div class="col-lg-8">
@@ -210,8 +256,15 @@
             document.getElementById("Segundo_nombreo").value = "Camilo";
             document.getElementById("primer_apellido").value = "Torres";
             document.getElementById("numero_de_documento").value = "<%=id.toString()%>";
+            document.getElementById("numero_de_telefono").value = "1001001";
             document.getElementById("numero_de_celular").value = "31222222222";
-            document.getElementById("fechaNacimiento").value = "1991-10-10";
+            document.getElementById("direccion").value = "calle 122122";
+            document.getElementById("ciudad").value = "bogota";
+            document.getElementById("departamento").value = "cundinamarca";
+            document.getElementById("pais").value = "colombia";
+            document.getElementById("profesion").value = "ing";
+            document.getElementById("email").value = "asd@hotmail.com";
+            
             $("#aceptar").hide();
         </script>
         <%
@@ -219,5 +272,3 @@
         %>
     </body>
 </html>
-
-
