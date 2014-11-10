@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Administrador
  */
-@WebServlet(name = "creacionClientesServlet", urlPatterns = {"/creacionClientesServlet"})
-public class creacionClientesServlet extends HttpServlet {
+@WebServlet(name = "CreacionClientesServlet", urlPatterns = {"/CreacionClientesServlet"})
+public class CreacionClientesServlet extends HttpServlet {
 
     private ClienteBean cliente = new ClienteBean();
 
@@ -71,11 +71,17 @@ public class creacionClientesServlet extends HttpServlet {
         cliente.setSegundoApellido(request.getParameter("segundoApellido"));
         cliente.setIdTipoDocumento(Integer.parseInt(request.getParameter("idTipoDocumento")));
         cliente.setNumeroDocumento(Integer.parseInt(request.getParameter("numeroDocumento")));
+        cliente.setNumeroTelefono(Integer.parseInt(request.getParameter("numeroTelefono")));
         cliente.setNumeroCelular(Integer.parseInt(request.getParameter("numeroCelular")));
+        cliente.setDireccion(request.getParameter("direccion"));
+        cliente.setCiudad(request.getParameter("ciudad"));
+        cliente.setDepartamento(request.getParameter("departamento"));
+        cliente.setPais(request.getParameter("pais"));
+        cliente.setProfesion(request.getParameter("profesion"));
         cliente.setEmail(request.getParameter("email"));
-        cliente.setFechaNacimiento(request.getParameter("fechaNacimiento"));
         cliente.setContrasena(request.getParameter("contrasena"));
-        processRequest(request, response);
+        processRequest(request, response); 
+        //
     }
 
     /**
