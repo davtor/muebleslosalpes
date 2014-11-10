@@ -4,30 +4,39 @@ package com.mueblesAlpes.Beans;
  *
  * @author Administrador
  */
-
-
 public class ClienteBean {
+
     private String primerNombre;
     private String segundoNombre;
     private String primerApellido;
     private String segundoApellido;
     private int idTipoDocumento;
     private int numeroDocumento;
+    private int numeroTelefono;
     private int numeroCelular;
+    private String direccion;
+    private String ciudad;
+    private String departamento;
+    private String pais;
+    private String profesion;
     private String email;
-    private String fechaNacimiento;
     private String contrasena;
 
-    public ClienteBean(String primerNombre, String segundoNombre, String primerApellido, String segundoApellido, int idTipoDocumento, int numeroDocumento, int numeroCelular, String email, String fechaNacimiento, String contrasena) {
+    public ClienteBean(String primerNombre, String segundoNombre, String primerApellido, String segundoApellido, int idTipoDocumento, int numeroDocumento, int numeroTelefono, int numeroCelular, String direccion, String ciudad, String departamento, String pais, String profesion, String email, String contrasena) {
         this.primerNombre = primerNombre;
         this.segundoNombre = segundoNombre;
         this.primerApellido = primerApellido;
         this.segundoApellido = segundoApellido;
         this.idTipoDocumento = idTipoDocumento;
         this.numeroDocumento = numeroDocumento;
+        this.numeroTelefono = numeroTelefono;
         this.numeroCelular = numeroCelular;
+        this.direccion = direccion;
+        this.ciudad = ciudad;
+        this.departamento = departamento;
+        this.pais = pais;
+        this.profesion = profesion;
         this.email = email;
-        this.fechaNacimiento = fechaNacimiento;
         this.contrasena = contrasena;
     }
 
@@ -82,12 +91,60 @@ public class ClienteBean {
         this.numeroDocumento = numeroDocumento;
     }
 
+    public int getNumeroTelefono() {
+        return numeroTelefono;
+    }
+
+    public void setNumeroTelefono(int numeroTelefono) {
+        this.numeroTelefono = numeroTelefono;
+    }
+
     public int getNumeroCelular() {
         return numeroCelular;
     }
 
     public void setNumeroCelular(int numeroCelular) {
         this.numeroCelular = numeroCelular;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getCiudad() {
+        return ciudad;
+    }
+
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
+    }
+
+    public String getDepartamento() {
+        return departamento;
+    }
+
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
+
+    public String getProfesion() {
+        return profesion;
+    }
+
+    public void setProfesion(String profesion) {
+        this.profesion = profesion;
     }
 
     public String getEmail() {
@@ -98,14 +155,6 @@ public class ClienteBean {
         this.email = email;
     }
 
-    public String getFechaNacimiento() {
-        return fechaNacimiento;
-    }
-
-    public void setFechaNacimiento(String fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
-    }
-
     public String getContrasena() {
         return contrasena;
     }
@@ -114,5 +163,5 @@ public class ClienteBean {
         this.contrasena = contrasena;
     }
     
-    
+
 }
