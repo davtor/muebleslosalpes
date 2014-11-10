@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Administrador
  */
-@WebServlet(name = "CreacionClientesServlet", urlPatterns = {"/CreacionClientesServlet"})
-public class CreacionClientesServlet extends HttpServlet {
+@WebServlet(name = "creacionClientesServlet", urlPatterns = {"/creacionClientesServlet"})
+public class creacionClientesServlet extends HttpServlet {
 
     private ClienteBean cliente = new ClienteBean();
 
