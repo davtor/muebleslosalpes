@@ -4,13 +4,13 @@ import com.mueblesAlpes.Beans.ClienteBean;
 import com.mueblesAlpes.Conexion.conexionBD;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
  *
- * @author Administrador
+ * @author Sebastian rojas - David Toro
+ *
  */
 public class ClientesDAO extends IDAO {
 
@@ -33,7 +33,7 @@ public class ClientesDAO extends IDAO {
             pstmt.setInt(5, cliente.getIdTipoDocumento());
             pstmt.setInt(6, cliente.getNumeroDocumento());
             pstmt.setInt(7, cliente.getNumeroTelefono());
-            pstmt.setInt(8, cliente.getNumeroCelular());
+            pstmt.setString(8, cliente.getNumeroCelular());
             pstmt.setString(9, cliente.getDireccion());
             pstmt.setString(10, cliente.getCiudad());
             pstmt.setString(11, cliente.getDepartamento());
@@ -45,7 +45,7 @@ public class ClientesDAO extends IDAO {
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         } finally {
-          
+
         }
         return true;
     }
