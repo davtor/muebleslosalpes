@@ -26,7 +26,7 @@ public class conexionBD {
     ds = new MysqlDataSource();
     ds.setServerName("127.0.0.1");
     ds.setUser("root");
-    ds.setPassword("");
+    ds.setPassword("gymejb");
     ds.setDatabaseName("muebles");
   }
 
