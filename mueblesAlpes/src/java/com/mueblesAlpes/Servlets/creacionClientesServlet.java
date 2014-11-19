@@ -1,8 +1,12 @@
 package com.mueblesAlpes.Servlets;
 
 import com.mueblesAlpes.Beans.ClienteBean;
+import com.mueblesAlpes.DAO.ClientesDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author Administrador
  */
 @WebServlet(name = "creacionClientesServlet", urlPatterns = {"/creacionClientesServlet"})
-public class creacionClientesServlet extends HttpServlet {
+public class creacionClientesServlet extends HttpServlet  {
 
     private ClienteBean cliente = new ClienteBean();
 
@@ -65,6 +69,8 @@ public class creacionClientesServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+      try {
+        ClientesDAO clientedao = new ClientesDAO();
         cliente.setPrimerNombre(request.getParameter("primerNombre"));
         cliente.setSegundoNombre(request.getParameter("segundoNombre"));
         cliente.setPrimerApellido(request.getParameter("primerApellido"));
@@ -80,7 +86,12 @@ public class creacionClientesServlet extends HttpServlet {
         cliente.setProfesion(request.getParameter("profesion"));
         cliente.setEmail(request.getParameter("email"));
         cliente.setContrasena(request.getParameter("contrasena"));
-        processRequest(request, response); 
+        clientedao.guardar(cliente);
+        processRequest(request, response);
+      } catch (SQLException ex) {
+        Logger.getLogger(creacionClientesServlet.class.getName()).log(Level.SEVERE, null, ex);
+      }
+         
         //
     }
 
