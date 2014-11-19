@@ -143,7 +143,7 @@
           <h2 class="page-header">Portafolio Productos</h2>
         </div>
         <div class="col-md-4 col-sm-6">
-          <img id="cama" class="img-responsive img-portfolio img-hover" src="http://localhost:8080/mueblesAlpes/imagenes/cama.jpeg" alt="">
+          <img id="cama" class="img-responsive img-portfolio img-hover" src="http://localhost:8089/mueblesAlpes/imagenes/cama.jpeg" alt="">
           <div class="caption">
             <h3>Cama</h3>
             <button type="button" class="btn btn-default" onclick="f_setCookie('cama')">
@@ -152,7 +152,7 @@
           </div>
         </div>
         <div class="col-md-4 col-sm-6">
-          <img id="sofa" class="img-responsive img-portfolio img-hover" src="http://localhost:8080/mueblesAlpes/imagenes/sofa.jpeg" alt="">
+          <img id="sofa" class="img-responsive img-portfolio img-hover" src="http://localhost:8089/mueblesAlpes/imagenes/sofa.jpeg" alt="">
           <div class="caption">
             <h3>Sofa</h3>
             <button type="button" class="btn btn-default" onclick="f_setCookie('sofa')">
@@ -161,7 +161,7 @@
           </div>
         </div>
         <div class="col-md-4 col-sm-6">
-          <img id="comedor" class="img-responsive img-portfolio img-hover" src="http://localhost:8080/mueblesAlpes/imagenes/comedor.jpg" alt="">
+          <img id="comedor" class="img-responsive img-portfolio img-hover" src="http://localhost:8089/mueblesAlpes/imagenes/comedor.jpg" alt="">
           <div class="caption">
             <h3>Comedor</h3>
             <button type="button" class="btn btn-default" onclick="f_setCookie('comedor')">
@@ -170,7 +170,7 @@
           </div>
         </div>
         <div class="col-md-4 col-sm-6">
-          <img id="juegoSala" class="img-responsive img-portfolio img-hover" src="http://localhost:8080/mueblesAlpes/imagenes/juegoSala.jpg" alt="">
+          <img id="juegoSala" class="img-responsive img-portfolio img-hover" src="http://localhost:8089/mueblesAlpes/imagenes/juegoSala.jpg" alt="">
           <div class="caption">
             <h3>Juego de Sala</h3>
             <button type="button" class="btn btn-default" onclick="f_setCookie('juegoSala')">
@@ -179,7 +179,7 @@
           </div>
         </div>
         <div class="col-md-4 col-sm-6">
-          <img id="ordenador" class="img-responsive img-portfolio img-hover" src="http://localhost:8080/mueblesAlpes/imagenes/ordenador.jpg" alt="">
+          <img id="ordenador" class="img-responsive img-portfolio img-hover" src="http://localhost:8089/mueblesAlpes/imagenes/ordenador.jpg" alt="">
           <div class="caption">
             <h3>Ordenador</h3>
             <button type="button" class="btn btn-default" onclick="f_setCookie('ordenador')">
@@ -188,7 +188,7 @@
           </div>
         </div>
         <div class="col-md-4 col-sm-6">
-          <img id="silla" class="img-responsive img-portfolio img-hover" src="http://localhost:8080/mueblesAlpes/imagenes/silla.jpg" alt="">
+          <img id="silla" class="img-responsive img-portfolio img-hover" src="http://localhost:8089/mueblesAlpes/imagenes/silla.jpg" alt="">
           <div class="caption">
             <h3>Silla</h3>
             <button type="button" class="btn btn-default" onclick="f_setCookie('silla')">

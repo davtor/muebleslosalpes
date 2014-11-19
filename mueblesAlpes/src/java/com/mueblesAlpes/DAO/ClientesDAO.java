@@ -4,8 +4,12 @@ import com.mueblesAlpes.Beans.ClienteBean;
 import com.mueblesAlpes.Conexion.conexionBD;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -46,6 +50,51 @@ public class ClientesDAO extends IDAO {
             System.out.println(e.getMessage());
         } finally {
 
+        }
+        return true;
+    }
+
+    public ArrayList<ClienteBean> getClientes() {
+        ArrayList<ClienteBean> clientes = new ArrayList<ClienteBean>();
+        String qQuery = "SELECT * FROM clientes ";
+        try {
+            PreparedStatement pstmt = conn.prepareStatement(qQuery);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                ClienteBean cliente = new ClienteBean();
+                cliente.setIdCliente(rs.getInt("idClientes"));
+                cliente.setPrimerNombre(rs.getNString("primerNombre"));
+                cliente.setSegundoNombre(rs.getNString("segundoNombre"));
+                cliente.setPrimerApellido(rs.getNString("primerApellido"));
+                cliente.setSegundoApellido(rs.getNString("segundoApellido"));
+                cliente.setIdTipoDocumento(rs.getInt("idTipoDocumentos"));
+                cliente.setNumeroDocumento(rs.getInt("numeroDocumento"));
+                cliente.setNumeroTelefono(rs.getInt("numeroTelefono"));
+                cliente.setNumeroCelular(rs.getNString("numeroCelular"));
+                cliente.setDireccion(rs.getNString("direccion"));
+                cliente.setCiudad(rs.getNString("ciudad"));
+                cliente.setDepartamento(rs.getNString("departamento"));
+                cliente.setPais(rs.getNString("pais"));
+                cliente.setProfesion(rs.getNString("profesion"));
+                cliente.setEmail(rs.getNString("email"));
+                cliente.setContrasena(rs.getNString("contrasena"));
+                clientes.add(cliente);
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(ClientesDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return clientes;
+    }
+
+    public boolean borrar(int idCliente) {
+        String qQuery = "DELETE FROM clientes WHERE idClientes = ? ";
+        try {
+            PreparedStatement pstmt = conn.prepareStatement(qQuery);
+            pstmt.setInt(1, idCliente);
+            pstmt.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(ClientesDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         return true;
     }
