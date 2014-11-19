@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author open12
+ * @author Sebastian Rojas - David Toro open12
  */
 public class usuariosDAO extends IDAO {
 

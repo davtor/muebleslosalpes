@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Administrador
+ * @author Sebastian Rojas - David Toro Administrador
  */
 public abstract class IDAO {
 

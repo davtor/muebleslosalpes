@@ -1,5 +1,7 @@
 package com.mueblesAlpes.Beans;
 
+import sun.security.util.BigInt;
+
 /**
  *
  * @author Administrador
@@ -13,7 +15,7 @@ public class ClienteBean {
     private int idTipoDocumento;
     private int numeroDocumento;
     private int numeroTelefono;
-    private int numeroCelular;
+    private String numeroCelular;
     private String direccion;
     private String ciudad;
     private String departamento;
@@ -22,7 +24,10 @@ public class ClienteBean {
     private String email;
     private String contrasena;
 
-    public ClienteBean(String primerNombre, String segundoNombre, String primerApellido, String segundoApellido, int idTipoDocumento, int numeroDocumento, int numeroTelefono, int numeroCelular, String direccion, String ciudad, String departamento, String pais, String profesion, String email, String contrasena) {
+    public ClienteBean() {
+    }
+
+    public ClienteBean(String primerNombre, String segundoNombre, String primerApellido, String segundoApellido, int idTipoDocumento, int numeroDocumento, int numeroTelefono, String numeroCelular, String direccion, String ciudad, String departamento, String pais, String profesion, String email, String contrasena) {
         this.primerNombre = primerNombre;
         this.segundoNombre = segundoNombre;
         this.primerApellido = primerApellido;
@@ -38,9 +43,6 @@ public class ClienteBean {
         this.profesion = profesion;
         this.email = email;
         this.contrasena = contrasena;
-    }
-
-    public ClienteBean() {
     }
 
     public String getPrimerNombre() {
@@ -99,11 +101,11 @@ public class ClienteBean {
         this.numeroTelefono = numeroTelefono;
     }
 
-    public int getNumeroCelular() {
+    public String getNumeroCelular() {
         return numeroCelular;
     }
 
-    public void setNumeroCelular(int numeroCelular) {
+    public void setNumeroCelular(String numeroCelular) {
         this.numeroCelular = numeroCelular;
     }
 
@@ -162,6 +164,5 @@ public class ClienteBean {
     public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
     }
-    
 
 }
