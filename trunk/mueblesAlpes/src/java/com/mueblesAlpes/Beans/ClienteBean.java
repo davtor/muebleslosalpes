@@ -8,6 +8,7 @@ import sun.security.util.BigInt;
  */
 public class ClienteBean {
 
+    private int idCliente;
     private String primerNombre;
     private String segundoNombre;
     private String primerApellido;
@@ -43,6 +44,14 @@ public class ClienteBean {
         this.profesion = profesion;
         this.email = email;
         this.contrasena = contrasena;
+    }
+
+    public int getIdCliente() {
+        return idCliente;
+    }
+
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
     }
 
     public String getPrimerNombre() {
