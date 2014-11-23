@@ -1,23 +1,23 @@
-
 package com.mueblesAlpes.Beans;
 
 /**
  *
- * @author 
+ * @author
  */
-
-
 public class ProductoBean {
+
+    private int idProducto;
     private String codigoP;
     private String nombre;
     private String descripcion;
     private int idtipoMueble;
     private String material;
     private String dimencion;
-     private String color;
-      private String peso;
+    private String color;
+    private String peso;
 
-    public ProductoBean(String codigoP, String nombre, String descripcion, int idtipoMueble, String material, String dimencion, String color, String peso) {
+    public ProductoBean(int idProducto, String codigoP, String nombre, String descripcion, int idtipoMueble, String material, String dimencion, String color, String peso) {
+        this.idProducto = idProducto;
         this.codigoP = codigoP;
         this.nombre = nombre;
         this.descripcion = descripcion;
@@ -27,9 +27,20 @@ public class ProductoBean {
         this.color = color;
         this.peso = peso;
     }
-    public ProductoBean(){
-        
+
+    public ProductoBean() {
+
     }
+
+    public int getIdProducto() {
+        return idProducto;
+    }
+
+    public void setIdProducto(int idProducto) {
+        this.idProducto = idProducto;
+    }
+    
+
     public String getCodigoP() {
         return codigoP;
     }
@@ -94,8 +105,4 @@ public class ProductoBean {
         this.peso = peso;
     }
 
-    
-    
-    
-    
 }
