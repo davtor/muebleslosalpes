@@ -104,7 +104,7 @@
             <fieldset> 
                 <legend> Mis Productos</legend>
 
-                <form class="form-horizontal" role="form" action="../CreacionProductoServlet">
+                <form class="form-horizontal" role="form" method="POST" action="../CreacionProductoServlet">
                     <div class="col-md-1">
                         <div class="form-group">
                             <label for="codigo_mueble" class="col-lg-10 control-label">Refencia</label>
