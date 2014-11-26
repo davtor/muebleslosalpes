@@ -31,7 +31,7 @@ public class ProductosDAO extends IDAO {
             pstmt.setString(1, producto.getCodigoP());
             pstmt.setString(2, producto.getNombre());
             pstmt.setString(3, producto.getDescripcion());
-            pstmt.setInt(4, producto.getIdtipoMueble());
+            pstmt.setString (4, producto.getIdtipoMueble()); 
             pstmt.setString(5, producto.getMaterial());
             pstmt.setString(6, producto.getDimencion());
             pstmt.setString(7, producto.getColor());
@@ -58,7 +58,7 @@ public class ProductosDAO extends IDAO {
                 producto.setCodigoP(rs.getString("referncia"));
                 producto.setNombre(rs.getString("nombre"));
                 producto.setDescripcion(rs.getString("descripcion"));
-                producto.setIdProducto(rs.getInt("tipo"));
+                producto.setIdtipoMueble(rs.getString("tipo"));
                 producto.setMaterial(rs.getString("material"));
                 producto.setDimencion(rs.getString("dimension"));
                 producto.setColor(rs.getString("color"));
@@ -85,7 +85,7 @@ public class ProductosDAO extends IDAO {
                 producto.setCodigoP(rs.getString("referncia"));
                 producto.setNombre(rs.getString("nombre"));
                 producto.setDescripcion(rs.getString("descripcion"));
-                producto.setIdProducto(rs.getInt("tipo"));
+                producto.setIdtipoMueble(rs.getString("tipo"));
                 producto.setMaterial(rs.getString("material"));
                 producto.setDimencion(rs.getString("dimension"));
                 producto.setColor(rs.getString("color"));

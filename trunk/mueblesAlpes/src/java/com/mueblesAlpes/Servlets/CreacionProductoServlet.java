@@ -39,7 +39,7 @@ public class CreacionProductoServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         try {
             String mensaje = "secreo con exito el producto";
-            response.sendRedirect("vistas/creacionProducto.jsp?respuesta=si&producto=" + producto.getNombre() + "&mensaje="+mensaje);
+            response.sendRedirect("vistas/creacionProducto.jsp?respuesta=si&producto=" + producto.getNombre() + "&mensaje="+ mensaje);
         } finally {
             out.close();
         }
@@ -78,7 +78,7 @@ public class CreacionProductoServlet extends HttpServlet {
         producto.setCodigoP(request.getParameter("codigoP"));
         producto.setNombre(request.getParameter("nombre"));
         producto.setDescripcion(request.getParameter("descripcion"));
-        producto.setIdtipoMueble(Integer.parseInt(request.getParameter("idtipoMueble")));
+        producto.setIdtipoMueble(request.getParameter("idtipoMueble"));
         producto.setMaterial(request.getParameter("material"));
         producto.setDimencion(request.getParameter("dimencion"));
         producto.setColor(request.getParameter("color"));
