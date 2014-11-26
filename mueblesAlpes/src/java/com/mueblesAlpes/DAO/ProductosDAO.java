@@ -35,7 +35,8 @@ public class ProductosDAO extends IDAO {
             pstmt.setString(5, producto.getMaterial());
             pstmt.setString(6, producto.getDimencion());
             pstmt.setString(7, producto.getColor());
-//            pstmt.setString(8, producto.getFoto));
+            pstmt.setString(8, producto.getPeso());
+//            pstmt.setString(9, producto.getFoto));
           pstmt.executeUpdate();
         } catch (SQLException ex) {
             //Logger.getLogger(ProductosDAO.class.getName()).log(Level.SEVERE, null, ex);
@@ -61,6 +62,7 @@ public class ProductosDAO extends IDAO {
                 producto.setMaterial(rs.getString("material"));
                 producto.setDimencion(rs.getString("dimension"));
                 producto.setColor(rs.getString("color"));
+                producto.setPeso(rs.getString("peso"));
                 //producto.setFoto(rs.getString("foto"));
                 productos.add(producto);    
             }
@@ -80,7 +82,5 @@ public class ProductosDAO extends IDAO {
             Logger.getLogger(ProductosDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         return true;
-    }
-
-    
+    }   
 }
