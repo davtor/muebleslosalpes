@@ -63,17 +63,17 @@
 
       <!-- Marketing Icons Section -->
       <div class="row">
-        <form class="form-horizontal" role="form" action="comprasporClienteS.jsp">
+        <form class="form-horizontal" role="form" action="../ComprasPorCliente" method="post">
           <br>
           <fieldset>
             <legend>Reporte Compras por Cliente</legend>
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group">
-                  <label for="nombreCliente" class="col-lg-4 control-label">Nombre del Cliente</label>
+                  <label for="numeroDocumento" class="col-lg-4 control-label">Identificacion del Cliente</label>
                   <div class="col-lg-8">
-                    <input type="text" class="form-control" id="nombreCliente"
-                           placeholder="Nombre del Cliente">
+                    <input type="text" class="form-control" id="numeroDocumento" name="numeroDocumento"
+                           placeholder="Numero de Documento">
                   </div>
                 </div>
               </div>

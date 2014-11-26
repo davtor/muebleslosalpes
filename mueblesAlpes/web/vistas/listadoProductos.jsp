@@ -3,6 +3,15 @@
     Created on : 08-sep-2014, 8:11:26
     Author     : open12
 --%>
+<%@page import="com.mueblesAlpes.Beans.ProductoMasVendidoBean"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.mueblesAlpes.DAO.ProductosDAO"%>
+<%
+  ProductosDAO productosdao = new ProductosDAO();
+  ArrayList<ProductoMasVendidoBean> lista = new ArrayList<ProductoMasVendidoBean>();
+  lista = productosdao.getListadoProductos();
+
+%>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -82,118 +91,25 @@
                 </tr>
               </thead>
               <tbody>
+                <%                  for (ProductoMasVendidoBean producto : lista) {
+                %>
                 <tr>
                   <td style="width: 20%; text-align: center">
-                    COD_111
+                    <%=producto.getCodigoProducto()%>
                   </td>
                   <td style="width: 40%; text-align: center">
-                    Sala Comedor
+                    <%=producto.getDescripcion()%>
                   </td>
                   <td style="width: 10%; text-align: center">
-                    100
+                    <%=producto.getCantidad()%>
                   </td>
                   <td style="width: 30%; text-align: center">
-                    50000000
+                    <%=producto.getPrecio()%>
                   </td>
                 </tr>
-                <tr>
-                  <td style="width: 20%; text-align: center">
-                    COD_112
-                  </td>
-                  <td style="width: 40%; text-align: center">
-                    Sofa
-                  </td>
-                  <td style="width: 10%; text-align: center">
-                    100
-                  </td>
-                  <td style="width: 30%; text-align: center">
-                    10000000
-                  </td>
-                </tr>
-                <tr>
-                  <td style="width: 20%; text-align: center">
-                    COD_113
-                  </td>
-                  <td style="width: 40%; text-align: center">
-                    Sofa Cama
-                  </td>
-                  <td style="width: 10%; text-align: center">
-                    100
-                  </td>
-                  <td style="width: 30%; text-align: center">
-                    30000000
-                  </td>
-                </tr>
-                <tr>
-                  <td style="width: 20%; text-align: center">
-                    COD_114
-                  </td>
-                  <td style="width: 40%; text-align: center">
-                    Silla
-                  </td>
-                  <td style="width: 10%; text-align: center">
-                    100
-                  </td>
-                  <td style="width: 30%; text-align: center">
-                    40000000
-                  </td>
-                </tr>
-                <tr>
-                  <td style="width: 20%; text-align: center">
-                    COD_115
-                  </td>
-                  <td style="width: 40%; text-align: center">
-                    Mesa
-                  </td>
-                  <td style="width: 10%; text-align: center">
-                    50
-                  </td>
-                  <td style="width: 30%; text-align: center">
-                    55000000
-                  </td>
-                </tr>
-                <tr>
-                  <td style="width: 20%; text-align: center">
-                    COD_116
-                  </td>
-                  <td style="width: 40%; text-align: center">
-                    Cama
-                  </td>
-                  <td style="width: 10%; text-align: center">
-                    160
-                  </td>
-                  <td style="width: 30%; text-align: center">
-                    60000000
-                  </td>
-                </tr>
-                <tr>
-                  <td style="width: 20%; text-align: center">
-                    COD_117
-                  </td>
-                  <td style="width: 40%; text-align: center">
-                    Mesa de Noche
-                  </td>
-                  <td style="width: 10%; text-align: center">
-                    170
-                  </td>
-                  <td style="width: 30%; text-align: center">
-                    50700000
-                  </td>
-                </tr>
-                <tr>
-                  <td style="width: 20%; text-align: center">
-                    COD_118
-                  </td>
-                  <td style="width: 40%; text-align: center">
-                    Comedor
-                  </td>
-                  <td style="width: 10%; text-align: center">
-                    180
-                  </td>
-                  <td style="width: 30%; text-align: center">
-                    80000000
-                  </td>
-                </tr>
+                <%
+                  }
+                %>
               </tbody>
             </table>
           </fieldset>

@@ -3,6 +3,12 @@
     Created on : 08-sep-2014, 7:34:49
     Author     : open12
 --%>
+<%@page import="com.mueblesAlpes.Beans.ProductoMasVendidoBean"%>
+<%@page import="java.util.ArrayList"%>
+<%
+  ArrayList<ProductoMasVendidoBean> lista = new ArrayList<ProductoMasVendidoBean>();
+  lista = (ArrayList) session.getAttribute("lista");
+%>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -75,41 +81,33 @@
             <table class="table table-hover" cellspacing="0" width="100%" id="datatable">
               <thead>
                 <tr>
-                  <th style="width: 20%; text-align: center">Codigo Producto</th>
+                  <th style="width: 20%; text-align: center">Codigo Producto o Referencia</th>
                   <th style="width: 40%; text-align: center">Descripci&oacute;n</th>
                   <th style="width: 10%; text-align: center">Cantidad</th>
                   <th style="width: 30%; text-align: center">Precio</th>
                 </tr>
               </thead>
               <tbody>
+                <%
+                  for (ProductoMasVendidoBean producto : lista) {
+                %>
                 <tr>
                   <td style="width: 20%; text-align: center">
-                    COD_111
+                    <%=producto.getCodigoProducto()%>
                   </td>
                   <td style="width: 40%; text-align: center">
-                    Sala Comedor
+                    <%=producto.getDescripcion()%>
                   </td>
                   <td style="width: 10%; text-align: center">
-                    10
+                    <%=producto.getCantidad()%>
                   </td>
                   <td style="width: 30%; text-align: center">
-                    500000000
+                    <%=producto.getPrecio()%>
                   </td>
                 </tr>
-                <tr>
-                  <td style="width: 20%; text-align: center">
-                    COD_112
-                  </td>
-                  <td style="width: 40%; text-align: center">
-                    Sofa Cama
-                  </td>
-                  <td style="width: 10%; text-align: center">
-                    5
-                  </td>
-                  <td style="width: 30%; text-align: center">
-                    5000000
-                  </td>
-                </tr>
+                <%
+                  }
+                %>
               </tbody>
             </table>
           </fieldset>
