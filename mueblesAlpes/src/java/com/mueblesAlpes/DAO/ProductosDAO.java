@@ -24,7 +24,7 @@ public class ProductosDAO extends IDAO {
     }
 
     public boolean guardar(ProductoBean producto) {
-        String qProducto = "INSERT INTO productos(idProductos, referncia, nombre, descripcion, tipo, material, dimension, color, foto) VALUES(NULL,?,?,?,?,?,?,?,?)";
+        String qProducto = "INSERT INTO productos (idProductos, referncia, nombre, descripcion, tipo, material, dimension, color, peso, foto) VALUES(NULL,?,?,?,?,?,?,?,?,?)";
         Statement ps = null;
         try {
             PreparedStatement pstmt = conn.prepareStatement(qProducto);
@@ -37,18 +37,18 @@ public class ProductosDAO extends IDAO {
             pstmt.setString(7, producto.getColor());
             pstmt.setString(8, producto.getPeso());
 //            pstmt.setString(9, producto.getFoto));
-          pstmt.executeUpdate();
+            pstmt.executeUpdate();
         } catch (SQLException ex) {
             //Logger.getLogger(ProductosDAO.class.getName()).log(Level.SEVERE, null, ex);
-             System.out.println(ex.getMessage());
-             } finally {
+            System.out.println(ex.getMessage());
+        } finally {
         }
         return true;
     }
+
     public ArrayList<ProductoBean> getProductos() {
         ArrayList<ProductoBean> productos = new ArrayList<ProductoBean>();
         String qQuery = "SELECT * FROM productos ";
-       
         try {
             PreparedStatement pstmt = conn.prepareStatement(qQuery);
             ResultSet rs = pstmt.executeQuery();
@@ -64,23 +64,54 @@ public class ProductosDAO extends IDAO {
                 producto.setColor(rs.getString("color"));
                 producto.setPeso(rs.getString("peso"));
                 //producto.setFoto(rs.getString("foto"));
-                productos.add(producto);    
+                productos.add(producto);
             }
-        
+
         } catch (SQLException ex) {
             Logger.getLogger(ProductosDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         return productos;
     }
+
+    public ProductoBean getProductoPorReferencia(String referencia) {
+        ProductoBean producto = new ProductoBean();
+        String qQuery = "SELECT * FROM productos WHERE referncia = ?";
+        try {
+            PreparedStatement pstmt = conn.prepareStatement(qQuery);
+            pstmt.setString(1, referencia);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                producto.setIdProducto(rs.getInt("idProductos"));
+                producto.setCodigoP(rs.getString("referncia"));
+                producto.setNombre(rs.getString("nombre"));
+                producto.setDescripcion(rs.getString("descripcion"));
+                producto.setIdProducto(rs.getInt("tipo"));
+                producto.setMaterial(rs.getString("material"));
+                producto.setDimencion(rs.getString("dimension"));
+                producto.setColor(rs.getString("color"));
+                producto.setPeso(rs.getString("peso"));
+                //producto.setFoto(rs.getString("foto"));   
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(ProductosDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return producto;
+    }
+
     public boolean borrar(int idproducto) {
+        boolean bandera = true;
         String qQuery = "DELETE FROM productos WHERE idProductos = ? ";
         try {
             PreparedStatement pstmt = conn.prepareStatement(qQuery);
             pstmt.setInt(1, idproducto);
-            pstmt.executeUpdate();
+            int resultado = pstmt.executeUpdate();
+            System.out.println("Entro a borrar debio borrar...");
+            if (resultado == 0) {
+                bandera = false;
+            }
         } catch (SQLException ex) {
             Logger.getLogger(ProductosDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return true;
-    }   
+        return bandera;
+    }
 }

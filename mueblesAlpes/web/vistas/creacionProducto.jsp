@@ -2,14 +2,16 @@
     Document   : creacionProducto
     Created on : 1/09/2014, 02:44:53 PM
     Author     : davtor
+ String idProducto = request.getParameter("idProducto") == null ? "" : request.getParameter("idProducto");
 --%>
+<%@page import="com.mueblesAlpes.Beans.ProductoBean" %>
+<%@page import="com.mueblesAlpes.DAO.ProductosDAO"%>
 <%
     String respuesta = request.getParameter("respuesta") == null ? "" : request.getParameter("respuesta");
     String producto = request.getParameter("producto") == null ? "" : request.getParameter("producto");
     String mensaje = request.getParameter("mensaje") == null ? "" : request.getParameter("mensaje");
     String productoId = request.getParameter("productoId") == null ? "" : request.getParameter("productoId");
-    String idProducto = request.getParameter("idProducto") == null ? "" : request.getParameter("idProducto");
-
+     String idProducto = request.getParameter("idProducto") == null ? "" : request.getParameter("idProducto");
 %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -206,9 +208,9 @@
            document.getElementById("codigo_mueble").value="11tt";
            document.getElementById("nombre").value="sofa cama";
            document.getElementById("cantidad").value="010";
-            $("#aceptar").hide();
+           $("#aceptar").hide();
        </script>
-       <%
+    <%
     }
     %>
     
