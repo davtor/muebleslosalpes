@@ -4,6 +4,14 @@
     Author     : open12
 --%>
 
+<%@page import="com.mueblesAlpes.Beans.ProductoMasVendidoBean"%>
+<%@page import="com.mueblesAlpes.DAO.ProductosDAO"%>
+<%
+  ProductosDAO productodao = new ProductosDAO();
+  ProductoMasVendidoBean producto = new ProductoMasVendidoBean();
+  producto = productodao.getProductomasVendido();
+%>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -75,7 +83,7 @@
             <table class="table table-hover" cellspacing="0" width="100%" id="datatable">
               <thead>
                 <tr>
-                  <th style="width: 20%; text-align: center">Codigo Producto</th>
+                  <th style="width: 20%; text-align: center">Referencia</th>
                   <th style="width: 40%; text-align: center">Descripci&oacute;n</th>
                   <th style="width: 10%; text-align: center">Cantidad</th>
                   <th style="width: 30%; text-align: center">Precio</th>
@@ -84,16 +92,16 @@
               <tbody>
                 <tr>
                   <td style="width: 20%; text-align: center">
-                    COD_111
+                    <%=producto.getCodigoProducto()%>
                   </td>
                   <td style="width: 40%; text-align: center">
-                    Sala Comedor
+                    <%=producto.getDescripcion()%>
                   </td>
                   <td style="width: 10%; text-align: center">
-                    100
+                    <%=producto.getCantidad()%>
                   </td>
                   <td style="width: 30%; text-align: center">
-                    50000000
+                    <%=producto.getPrecio()%>
                   </td>
                 </tr>
               </tbody>
