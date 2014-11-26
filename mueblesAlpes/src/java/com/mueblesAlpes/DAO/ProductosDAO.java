@@ -2,7 +2,7 @@ package com.mueblesAlpes.DAO;
 
 /**
  *
- * @author davtor
+ * @author Sebastian rojas - David Toro
  */
 import com.mueblesAlpes.Beans.ProductoBean;
 import com.mueblesAlpes.Conexion.conexionBD;
@@ -31,7 +31,7 @@ public class ProductosDAO extends IDAO {
             pstmt.setString(1, producto.getCodigoP());
             pstmt.setString(2, producto.getNombre());
             pstmt.setString(3, producto.getDescripcion());
-            pstmt.setString (4, producto.getIdtipoMueble()); 
+            pstmt.setString(4, producto.getIdtipoMueble()); 
             pstmt.setString(5, producto.getMaterial());
             pstmt.setString(6, producto.getDimencion());
             pstmt.setString(7, producto.getColor());

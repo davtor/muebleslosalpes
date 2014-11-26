@@ -16,7 +16,10 @@ public class ProductoBean {
     private String color;
     private String peso;
 
-    public ProductoBean(int idProducto, String codigoP, String nombre, String descripcion, String  idtipoMueble, String material, String dimencion, String color, String peso) {
+    public ProductoBean() {
+    }
+
+    public ProductoBean(int idProducto, String codigoP, String nombre, String descripcion, String idtipoMueble, String material, String dimencion, String color, String peso) {
         this.idProducto = idProducto;
         this.codigoP = codigoP;
         this.nombre = nombre;
@@ -28,10 +31,6 @@ public class ProductoBean {
         this.peso = peso;
     }
 
-    public ProductoBean() {
-
-    }
-
     public int getIdProducto() {
         return idProducto;
     }
@@ -39,7 +38,6 @@ public class ProductoBean {
     public void setIdProducto(int idProducto) {
         this.idProducto = idProducto;
     }
-    
 
     public String getCodigoP() {
         return codigoP;
@@ -65,6 +63,13 @@ public class ProductoBean {
         this.descripcion = descripcion;
     }
 
+    public String getIdtipoMueble() {
+        return idtipoMueble;
+    }
+
+    public void setIdtipoMueble(String idtipoMueble) {
+        this.idtipoMueble = idtipoMueble;
+    }
 
     public String getMaterial() {
         return material;
@@ -98,12 +103,5 @@ public class ProductoBean {
         this.peso = peso;
     }
 
-    public String getIdtipoMueble() {
-        return idtipoMueble;
-    }
-
-    public void setIdtipoMueble(String idtipoMueble) {
-        this.idtipoMueble = idtipoMueble;
-    }
 
 }

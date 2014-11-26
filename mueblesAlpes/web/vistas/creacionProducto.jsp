@@ -136,7 +136,7 @@
                         <div class="form-group">
                             <label for="tipo_mueble" class="col-lg-10 control-label">Tipo</label>
                             <div class="col-lg-12">
-                                <select class="form-control" name="idtipoMueble">
+                                <select class="form-control" name="tipo">
                                     <option>Interior</option>
                                     <option>Exterior</option>               
                                 </select>
