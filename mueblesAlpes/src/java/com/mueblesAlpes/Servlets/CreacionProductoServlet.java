@@ -88,6 +88,7 @@ public class CreacionProductoServlet extends HttpServlet {
         } catch (SQLException ex) {
             Logger.getLogger(CreacionProductoServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
     }
     
     
