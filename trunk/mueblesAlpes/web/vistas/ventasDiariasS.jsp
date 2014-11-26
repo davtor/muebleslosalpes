@@ -3,6 +3,12 @@
     Created on : 08-sep-2014, 7:34:49
     Author     : open12
 --%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.mueblesAlpes.Beans.VentaDiariaBean"%>
+<%
+  ArrayList<VentaDiariaBean> lista = new ArrayList<VentaDiariaBean>();
+  lista = (ArrayList) session.getAttribute("lista");
+%>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -88,34 +94,26 @@
                 </tr>
               </thead>
               <tbody>
+                <%
+                  for (VentaDiariaBean ventadiaria : lista) {
+                %>
                 <tr>
                   <td style="width: 30%; text-align: center">
-                    Sebastian Rojas
+                    <%=ventadiaria.getNombreCliente()%>
                   </td>
                   <td style="width: 20%; text-align: center">
-                    COD_111
+                    <%=ventadiaria.getCodigoProducto()%>
                   </td>
                   <td style="width: 40%; text-align: center">
-                    Sala Comedor
+                    <%=ventadiaria.getDescripcion()%>
                   </td>
                   <td style="width: 10%; text-align: center">
-                    1
+                    <%=ventadiaria.getCantidad()%>
                   </td>
                 </tr>
-                <tr>
-                  <td style="width: 30%; text-align: center">
-                    Sebastian Rojas
-                  </td>
-                  <td style="width: 20%; text-align: center">
-                    COD_112
-                  </td>
-                  <td style="width: 40%; text-align: center">
-                    Sofa Cama
-                  </td>
-                  <td style="width: 10%; text-align: center">
-                    1
-                  </td>
-                </tr>
+                <%
+              }
+                %>
               </tbody>
             </table>
           </fieldset>
@@ -139,3 +137,6 @@
   </body>
 
 </html>
+<%
+session.removeAttribute("lista");
+%>

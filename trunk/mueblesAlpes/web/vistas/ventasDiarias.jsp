@@ -63,7 +63,7 @@
 
       <!-- Marketing Icons Section -->
       <div class="row">
-        <form class="form-horizontal" role="form" action="ventasDiariasS.jsp">
+        <form class="form-horizontal" role="form" action="../VentasDiariasServlet" method="post">
           <br>
           <fieldset>
             <legend>Reporte de Ventas Diarias</legend>
@@ -72,7 +72,7 @@
                 <div class="form-group">
                   <label for="nombreCliente" class="col-lg-2 control-label">Nombre del Cliente</label>
                   <div class="col-lg-10">
-                    <input type="text" class="form-control" id="nombreCliente"
+                    <input type="text" class="form-control" id="nombreCliente" name="nombreCliente"
                            placeholder="Nombre del Cliente">
                   </div>
                 </div>
@@ -81,9 +81,9 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group">
-                  <label for="codigoProducto" class="col-lg-2 control-label">Codigo del Producto</label>
+                  <label for="referenciaProducto" class="col-lg-2 control-label">Referencia del Producto</label>
                   <div class="col-lg-10">
-                    <input type="text" class="form-control" id="codigoProducto"
+                    <input type="text" class="form-control" id="referenciaProducto" name="referenciaProducto"
                            placeholder="Codigo del Producto">
                   </div>
                 </div>
