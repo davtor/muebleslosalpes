@@ -17,8 +17,6 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Administrador
  */
-
-
 @WebServlet(name = "CreacionProductoServlet", urlPatterns = {"/CreacionProductoServlet"})
 public class CreacionProductoServlet extends HttpServlet {
 
@@ -39,7 +37,7 @@ public class CreacionProductoServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         try {
             String mensaje = "secreo con exito el producto";
-            response.sendRedirect("vistas/creacionProducto.jsp?respuesta=si&producto=" + producto.getNombre() + "&mensaje="+ mensaje);
+            response.sendRedirect("vistas/creacionProducto.jsp?respuesta=si&producto=" + producto.getNombre() + "&mensaje=" + mensaje);
         } finally {
             out.close();
         }
@@ -75,23 +73,21 @@ public class CreacionProductoServlet extends HttpServlet {
         ProductosDAO miProductodao;
         try {
             miProductodao = new ProductosDAO();
-        producto.setCodigoP(request.getParameter("codigoP"));
-        producto.setNombre(request.getParameter("nombre"));
-        producto.setDescripcion(request.getParameter("descripcion"));
-        producto.setIdtipoMueble(request.getParameter("idtipoMueble"));
-        producto.setMaterial(request.getParameter("material"));
-        producto.setDimencion(request.getParameter("dimencion"));
-        producto.setColor(request.getParameter("color"));
-        producto.setPeso(request.getParameter("peso"));
-        miProductodao.guardar(producto);
-        processRequest(request, response);
+            producto.setCodigoP(request.getParameter("codigoP"));
+            producto.setNombre(request.getParameter("nombre"));
+            producto.setDescripcion(request.getParameter("descripcion"));
+            producto.setIdtipoMueble(request.getParameter("tipo"));
+            producto.setMaterial(request.getParameter("material"));
+            producto.setDimencion(request.getParameter("dimencion"));
+            producto.setColor(request.getParameter("color"));
+            producto.setPeso(request.getParameter("peso"));
+            miProductodao.guardar(producto);
+            processRequest(request, response);
         } catch (SQLException ex) {
             Logger.getLogger(CreacionProductoServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
     }
-    
-    
 
     /**
      * Returns a short description of the servlet.
