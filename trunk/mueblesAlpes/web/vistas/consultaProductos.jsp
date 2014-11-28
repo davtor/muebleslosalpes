@@ -55,13 +55,13 @@
 
       <!-- Marketing Icons Section -->
       <div class="row">
-          <form class="form-horizontal" role="form" action="../ConsultarProductoServlet" method="post">
+          <form class="form-horizontal" role="form" action="creacionProducto.jsp">
           <br>
           <fieldset>
             <legend>Consulta de Productos</legend>
             <div class="form-group">
               <div class="col-xs-6">
-                <label for="idProducto" class="col-lg-5 control-label">Codigo Producto</label>
+                <label for="idProducto" class="col-lg-5 control-label">Referencia Producto</label>
                 <div class="col-lg-7">
                   <input type="text" class="form-control" id="idProducto"  
                          placeholder="Codigo Producto" name="idProducto">

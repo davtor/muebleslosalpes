@@ -25,7 +25,7 @@ public class ProductosDAO extends IDAO {
   }
 
   public boolean guardar(ProductoBean producto) {
-    String qProducto = "INSERT INTO productos (idProductos, referncia, nombre, descripcion, tipo, material, dimension, color, peso, foto) VALUES(NULL,?,?,?,?,?,?,?,?,?)";
+    String qProducto = "INSERT INTO productos (idProductos, referncia, nombre, descripcion, tipo, material, dimension, color, peso, foto) VALUES(NULL,?,?,?,?,?,?,?,?,null)";
     Statement ps = null;
     try {
       PreparedStatement pstmt = conn.prepareStatement(qProducto);
@@ -46,6 +46,7 @@ public class ProductosDAO extends IDAO {
     }
     return true;
   }
+ 
 
   public ArrayList<ProductoBean> getProductos() {
     ArrayList<ProductoBean> productos = new ArrayList<ProductoBean>();
@@ -67,7 +68,6 @@ public class ProductosDAO extends IDAO {
         //producto.setFoto(rs.getString("foto"));
         productos.add(producto);
       }
-
     } catch (SQLException ex) {
       Logger.getLogger(ProductosDAO.class.getName()).log(Level.SEVERE, null, ex);
     }

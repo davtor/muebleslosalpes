@@ -1,8 +1,14 @@
 
 package com.mueblesAlpes.Servlets;
 
+import com.mueblesAlpes.DAO.ProductosDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,7 +23,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(name = "EliminacionProductoServlet", urlPatterns = {"/EliminacionProductoServlet"})
 public class EliminacionProductoServlet extends HttpServlet {
-
+    private String mensaje  ="";
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -32,7 +38,6 @@ public class EliminacionProductoServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-            String mensaje = "se ha eliminado con exito";
             response.sendRedirect("vistas/eliminacionProductos.jsp?respuesta=si&mensaje="+mensaje);
         } finally {
             out.close();
@@ -65,6 +70,25 @@ public class EliminacionProductoServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String productos = request.getParameter("productosSeleccionados");
+        if(productos.length() == 0){
+            mensaje = "Debe Seleccionar al menos un producto ";
+        } else {
+             ArrayList<String> vProductos = new ArrayList(Arrays.asList(productos.split("-")));
+             for (int i = 0; i < vProductos.size(); i++) {
+                int codProducto = Integer.parseInt(vProductos.get(i));
+                
+                 try {
+                     ProductosDAO productodao = new ProductosDAO();
+                     if(productodao.borrar(codProducto)){
+                         mensaje = "Producto Borrado con Exito ";
+                     }
+                 } catch (SQLException ex) {
+                     Logger.getLogger(EliminacionProductoServlet.class.getName()).log(Level.SEVERE, null, ex);
+                 }
+                
+            }
+        }
         processRequest(request, response);
     }
 
