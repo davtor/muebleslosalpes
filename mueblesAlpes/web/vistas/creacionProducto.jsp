@@ -10,8 +10,11 @@
     String respuesta = request.getParameter("respuesta") == null ? "" : request.getParameter("respuesta");
     String producto = request.getParameter("producto") == null ? "" : request.getParameter("producto");
     String mensaje = request.getParameter("mensaje") == null ? "" : request.getParameter("mensaje");
-    String productoId = request.getParameter("productoId") == null ? "" : request.getParameter("productoId");
-     String idProducto = request.getParameter("idProducto") == null ? "" : request.getParameter("idProducto");
+    String idProducto = request.getParameter("idProducto") == null ? "" : request.getParameter("idProducto");
+    String edicion = request.getParameter("edicion") == null ? "" : request.getParameter("edicion");
+    ProductoBean productoP = new ProductoBean();
+    ProductosDAO productodao = new ProductosDAO();
+    productoP = productodao.getProductoPorReferencia(idProducto);
 %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -58,7 +61,7 @@
             }
         </style>
         <script type="text/javascript">
-           $(document).ready(function() {
+            $(document).ready(function () {
                 f_LoadMenu();
                 if ("<%= respuesta.toString()%>" === "si") {
                     $.growlUI('<%=mensaje.toString()%>', '<%= producto.toString()%>');
@@ -86,7 +89,7 @@
                 }
             });
         </script>
-        
+
     </head>
 
 </head>
@@ -105,6 +108,7 @@
                 <legend> Mis Productos</legend>
 
                 <form class="form-horizontal" role="form" method="POST" action="../CreacionProductoServlet">
+                    <input value="<%=edicion%>" name="edicion" type="hidden">
                     <div class="col-md-1">
                         <div class="form-group">
                             <label for="codigo_mueble" class="col-lg-10 control-label">Refencia</label>
@@ -180,40 +184,50 @@
                         </div>
                     </div>
 
-                        <div class="form-group">
-                            <div class="col-lg-offset-2 col-lg-10">
-                                <button type="submit" class="btn btn-default" id="aceptar">Aceptar</button>
-                            </div>
+                    <div class="form-group">
+                        <div class="col-lg-offset-2 col-lg-10">
+                            <button type="submit" class="btn btn-default" id="aceptar">
+                                <%
+                                if(edicion.length() == 0) {
+                                    %>
+                                    Aceptar
+                                    <%
+                                } else {
+                                    %>
+                                    Editar
+                                    <%
+                                }
+                                %>
+                            </button>
                         </div>
-                   
+                    </div>
+
                 </form>
             </fieldset>
         </div>
     </div>
     <%
-    if(productoId!=""){
-       %> 
-       <script type="text/javascript">
-           document.getElementById("codigo_mueble").value="11tt";
-           document.getElementById("nombre").value="sofa cama";
-           document.getElementById("cantidad").value="010";
-       </script>
-       <%
-    }
-    %>
+        if (idProducto != "") {
+    %> 
+    <script type="text/javascript">
+        document.getElementById("codigo_mueble").value = "<%=productoP.getCodigoP()%>";
+        document.getElementById("nombre").value = "<%=productoP.getNombre()%>";
+        document.getElementById("descripcion").value = "<%=productoP.getDescripcion()%>";
+        document.getElementById("material").value = "<%=productoP.getMaterial()%>";
+        document.getElementById("dimencion").value = "<%=productoP.getDimencion()%>";
+        document.getElementById("color").value = "<%=productoP.getColor()%>";
+        document.getElementById("peso").value = "<%=productoP.getPeso()%>";
+        $("#aceptar").hide();
+    </script>
     <%
-    if(idProducto!=""){
-       %> 
-       <script type="text/javascript">
-           document.getElementById("codigo_mueble").value="11tt";
-           document.getElementById("nombre").value="sofa cama";
-           document.getElementById("cantidad").value="010";
-           $("#aceptar").hide();
-       </script>
-    <%
-    }
+        }
+        if(edicion.length() != 0) {
+            %>
+            $("#aceptar").show();
+            <%
+        }
     %>
-    
+
 </body>
 
 </html>
